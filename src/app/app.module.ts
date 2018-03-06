@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes }   from '@angular/router';
 
@@ -11,8 +11,8 @@ import { ContactComponent } from './components/contact/contact.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home',  component: HomeComponent },
-  { path: 'contact',  component: ContactComponent }
+  { path: 'home', component: HomeComponent, data: { title: 'Home' } },
+  { path: 'contact', component: ContactComponent, data: { title: 'Contact'} }
 ];
 
 @NgModule({
