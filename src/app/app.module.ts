@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ContentfulService } from './services/contentful.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CarouselModule} from 'ngx-bootstrap/carousel';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -15,6 +16,8 @@ import { NewsComponent } from './components/news/news.component';
 import { AboutComponent } from './components/about/about.component';
 import { AnimalRegistrationComponent } from './components/animal-registration/animal-registration.component';
 import { NewsItemComponent } from './components/news-item/news-item.component';
+import { MainCarouselComponent } from './components/main-carousel/main-carousel.component';
+import { HeaderComponent } from './components/header/header.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -38,12 +41,15 @@ const appRoutes: Routes = [
     NewsComponent,
     AboutComponent,
     AnimalRegistrationComponent,
-    NewsItemComponent
+    NewsItemComponent,
+    MainCarouselComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    CarouselModule.forRoot()
   ],
   providers: [
     ContentfulService
