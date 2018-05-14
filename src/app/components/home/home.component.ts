@@ -22,14 +22,14 @@ export class HomeComponent implements OnInit {
   newsitem1: NewsItem = {
     title: 'title 1',
     body: 'body 1',
-    image: 'assets/images/some-imae.jpg',
+    image: 'assets/images/nieuwsitem-01.jpg',
     caption: 'pretty image1'
   }
 
   newsitem2: NewsItem = {
     title: 'title 2',
     body: 'body 2',
-    image: 'assets/images/some-imae.jpg',
+    image: 'assets/images/nieuwsitem-02.jpg',
     caption: 'pretty image2'
   }
 

@@ -18,6 +18,7 @@ import { AnimalRegistrationComponent } from './components/animal-registration/an
 import { NewsItemComponent } from './components/news-item/news-item.component';
 import { MainCarouselComponent } from './components/main-carousel/main-carousel.component';
 import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -43,7 +44,8 @@ const appRoutes: Routes = [
     AnimalRegistrationComponent,
     NewsItemComponent,
     MainCarouselComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
