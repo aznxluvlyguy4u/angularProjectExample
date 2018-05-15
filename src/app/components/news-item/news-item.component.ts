@@ -7,10 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class NewsItemComponent implements OnInit {
 
-  @Input() newsitem;
-  @Input() backgroundColor;
-  @Input() priority;
-
+  @Input() newsItem;
   constructor() { }
 
   ngOnInit() {

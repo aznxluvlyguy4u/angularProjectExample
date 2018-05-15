@@ -1,31 +1,16 @@
 <div class="row">
-
-  <div class="row nav-summary mt-4">
-    <div class="col-lg-4 text-center">
-      <img src="assets/svg/diergezondheid.svg" alt="Generic placeholder image" class="nav-summary__icon">
-      <h5>DIERREGISTRATIE</h5>
-      <p>Altijd beschikbaar, waar en wanneer u maar wilt.</p>
-    </div><!-- /.col-lg-4 -->
-    <div class="col-lg-4 text-center">
-      <img src="assets/svg/dierregistratie.svg" alt="Generic placeholder image" class="nav-summary__icon">
-      <h5>DIERGEZONDHEID</h5>
-      <p>De beste kwaliteit voor de scherpste tarieven.</p>
-    </div><!-- /.col-lg-4 -->
-    <div class="col-lg-4 text-center">
-      <img src="assets/svg/fokkerij.svg" alt="Generic placeholder image" class="nav-summary__icon">
-      <h5>FOKKERIJ</h5>
-      <p>Wij ondersteunen uw passie met innovatieve oplossingen.</p>
-    </div><!-- /.col-lg-4 -->
+  <div class="products p-4 d-flex justify-content-around">
+    <app-product *ngFor="let product of products" class="col-3 text-center" [product]="product"></app-product>
   </div>
+</div>
 
-  <div class="row call-to-action text-center p-3">
-
-    <div class="col-12">
+<div class="row">
+  <div class="col-12 call-to-action text-center">
+    <div class="col-12 mb-2">
       <div class="call-to-action__title">STAP NU EENVOUDIG OVER</div>
       <div class="call-to-action__subtitle">PROFITEER VAN DE VOORDELEN VAN NSFO</div>
     </div>
-
-    <div class="col-12 call-to-action__bullets">
+    <div class="col-12 mb-4 call-to-action__bullets">
       <ul>
         <li><i class="fas fa-check"></i> Bundeling van kwaliteit en scherpe tarieven</li>
         <li><i class="fas fa-check"></i> ISO 9001:2008 gecertificeerd en voor exportdoeleinden geaccepteerd door de NVWA</li>
@@ -33,17 +18,12 @@
         <li><i class="fas fa-check"></i> Ons CL-programma is erkend door de Vereniging Kwaliteitszorg Geitenhouderij Nederland (VKGN)</li>
       </ul>
     </div>
-
     <button type="button" class="btn call-to-action__button mx-auto">JA, IK STAP OVER</button>
   </div>
+</div>
 
-  <div class="row latest-news">
-    <div class="col">
-      <app-news-item [newsitem]="newsitem1"></app-news-item>
-    </div>
-    <div class="col">
-      <app-news-item [newsitem]="newsitem2"></app-news-item>
-    </div>
+<div class="row">
+  <div class="d-flex justify-content-around col-12 latest-news">
+    <app-news-item *ngFor="let newsItem of newsItems" [newsItem]="newsItem"></app-news-item>
   </div>
-
 </div>
