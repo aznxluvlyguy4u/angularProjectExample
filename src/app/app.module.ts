@@ -20,6 +20,7 @@ import { MainCarouselComponent } from './components/main-carousel/main-carousel.
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductComponent } from './components/product/product.component';
+import { AnimalHealthArticleComponent } from './components/animal-health-article/animal-health-article.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -47,7 +48,8 @@ const appRoutes: Routes = [
     MainCarouselComponent,
     HeaderComponent,
     FooterComponent,
-    ProductComponent
+    ProductComponent,
+    AnimalHealthArticleComponent
   ],
   imports: [
     BrowserModule,

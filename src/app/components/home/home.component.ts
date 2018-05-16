@@ -24,6 +24,7 @@ export class HomeComponent implements OnInit {
 
   private products: Entry<any>[] = [];
 
+  // Unused, for testing purpose only
   private productExamples: Product[] = [
     {
       productImage: 'assets/svg/dierregistratie.svg',
