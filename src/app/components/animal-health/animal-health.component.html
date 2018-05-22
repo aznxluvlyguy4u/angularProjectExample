@@ -51,6 +51,10 @@
 
 </div>
 
+<div class="row animal-health-banners">
+  <app-banner class="col-12" *ngFor="let animalHealthBanner of animalHealthBanners" [banner]="animalHealthBanner"></app-banner>
+</div>
+
 <div class="row d-flex animal-health-articles">
   <p class="col-12 animal-health-articles__title">MEER OVER DIERGEZONDHEID</p>
   <app-animal-health-article class="col-4" *ngFor="let animalHealthArticle of animalHealthArticles" [animalHealthArticle]="animalHealthArticle"></app-animal-health-article>

@@ -2,6 +2,7 @@ import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { MainCarouselService } from './services/main-carousel.service';
 import { ContentfulService } from './services/contentful.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule} from 'ngx-bootstrap/carousel';
@@ -21,6 +22,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductComponent } from './components/product/product.component';
 import { AnimalHealthArticleComponent } from './components/animal-health-article/animal-health-article.component';
+import { BannerComponent } from './components/banner/banner.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -49,7 +51,8 @@ const appRoutes: Routes = [
     HeaderComponent,
     FooterComponent,
     ProductComponent,
-    AnimalHealthArticleComponent
+    AnimalHealthArticleComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +61,8 @@ const appRoutes: Routes = [
     CarouselModule.forRoot()
   ],
   providers: [
-    ContentfulService
+    ContentfulService,
+    MainCarouselService
   ],
   bootstrap: [AppComponent]
 })
