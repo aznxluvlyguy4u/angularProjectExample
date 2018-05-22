@@ -9,9 +9,10 @@ interface AnimalHealthArticle {
 
 interface AnimalHealthBanner {
   backgroundColor: string;
+  color: string;
   title: string;
   icon: string;
-  text: string;
+  linkText: string;
   linkUrl: string;
 }
 
@@ -52,16 +53,18 @@ export class AnimalHealthComponent implements OnInit {
   private animalHealthBanners: AnimalHealthBanner[] = [
     {
       backgroundColor: '#f0f0f0',
+      color: '#4a4a4a',
       title: 'AANMELDFORMULIER NSFO DIERGEZONDHEID',
       icon: 'assets/svg/dierregistratie.svg',
-      text: 'Download: pdf 520 kb',
+      linkText: 'Download: pdf 520 kb',
       linkUrl: 'zwoegerziekte'
     },
     {
       backgroundColor: '#459d68',
+      color: '#ffffff',
       title: 'TARIEVEN',
       icon: 'assets/svg/noun-999157-grijs.svg',
-      text: 'in combinatie met het Abonnement op NSFO Diergezondheid',
+      linkText: 'in combinatie met het Abonnement op NSFO Diergezondheid',
       linkUrl: 'zwoegerziekte'
     }
   ];

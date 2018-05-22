@@ -1,11 +1,11 @@
-<div class="banner row d-flex justify-content-center" [ngStyle]="{ 'background-color': getBackgroundColor() }">
+<div class="banner row d-flex justify-content-center" [ngStyle]="{ 'background-color': banner.backgroundColor }">
   <div class="banner__content row col-7">
     <div class="banner__content--leftColumn col-2 d-flex justify-content-end align-content-center">
       <img src="{{ banner.icon }}" alt="">
     </div>
     <div class="banner__content--rightColumn row col-10 d-flex align-content-center">
-      <p class="col-12">{{ banner.title }}</p>
-      <a class="col-12" href="{{ banner.linkUrl }}">{{ banner.text }}</a>
+      <p [ngStyle]="{ 'color': banner.color }" class="col-12 banner__content--rightColumn__title">{{ banner.title }}</p>
+      <a [ngStyle]="{ 'color': banner.color }" class="col-12 banner__content--rightColumn__url" href="{{ banner.linkUrl }}">{{ banner.linkText }}</a>
     </div>
   </div>
 </div>

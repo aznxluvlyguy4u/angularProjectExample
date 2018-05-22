@@ -13,8 +13,4 @@ export class BannerComponent implements OnInit {
   ngOnInit() {
   }
 
-  getBackgroundColor() {
-    return this.banner.backgroundColor;
-  }
-
 }
