@@ -1,9 +1,9 @@
 <div class="animal-health-article row d-flex">
   <div class="col-12 animal-health-article__imageContainer text-center">
-    <img class="animal-health-article__image" src="{{ animalHealthArticle.image }}" alt="">
+    <img class="animal-health-article__image" src="{{ animalHealthArticle.fields.image.fields.file.url }}" alt="">
   </div>
   <div class="col-12 animal-health-artical__textContainer">
-    <p class="col-12 h-25 animal-health-article__topic">{{ animalHealthArticle.topic }}</p>
-    <p class="col-12 h-25 animal-health-article__title">{{ animalHealthArticle.title }}</p>
+    <p class="col-12 h-25 animal-health-article__topic">{{ animalHealthArticle.fields.topic }}</p>
+    <p class="col-12 h-25 animal-health-article__title">{{ animalHealthArticle.fields.title }}</p>
   </div>
 </div>

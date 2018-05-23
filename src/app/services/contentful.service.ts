@@ -2,12 +2,22 @@ import { Injectable } from '@angular/core';
 
 import { createClient, Entry } from 'contentful';
 
+// const CONFIG = {
+//   space: 'wl1z0pal05vy',
+//   accessToken: '0e3ec801b5af550c8a1257e8623b1c77ac9b3d8fcfc1b2b7494e3cb77878f92a',
+//
+//   contentTypeIds: {
+//     product: '2PqfXUJwE8qSYKuM0U6w8M'
+//   }
+// }
+
 const CONFIG = {
-  space: 'wl1z0pal05vy',
-  accessToken: '0e3ec801b5af550c8a1257e8623b1c77ac9b3d8fcfc1b2b7494e3cb77878f92a',
+  space: 'ab1wht89h7y6',
+  accessToken: '563773974e0ac004f8c429d9a0ace9de96d002a49bbaa6e3011b0e9da3afda93',
 
   contentTypeIds: {
-    product: '2PqfXUJwE8qSYKuM0U6w8M'
+    product: 'product',
+    animalHealthArticle: 'animalHealthArticle'
   }
 }
 
@@ -25,5 +35,12 @@ export class ContentfulService {
       content_type: CONFIG.contentTypeIds.product
     }, query))
     .then(res => res.items);
+  }
+
+  getAnimalHealthArticles(query?: object): Promise<Entry<any>[]> {
+    return this.cdaClient.getEntries(Object.assign({
+      content_type: CONFIG.contentTypeIds.animalHealthArticle
+    }, query))
+      .then(res => res.items);
   }
 }

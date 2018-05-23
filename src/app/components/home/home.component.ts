@@ -24,25 +24,6 @@ export class HomeComponent implements OnInit {
 
   private products: Entry<any>[] = [];
 
-  // Unused, for testing purpose only
-  private productExamples: Product[] = [
-    {
-      productImage: 'assets/svg/dierregistratie.svg',
-      productName: 'DIERREGISTRATIE',
-      productDescription: 'Altijd beschikbaar, waar en wanneer u maar wilt.'
-    },
-    {
-      productImage: 'assets/svg/diergezondheid.svg',
-      productName: 'DIERGEZONDHEID',
-      productDescription: 'De beste kwaliteit voor de scherpste tarieven.'
-    },
-    {
-      productImage: 'assets/svg/fokkerij.svg',
-      productName: 'FOKKERIJ',
-      productDescription: 'Wij ondersteunen uw passie met innovatieve oplossingen.'
-    }
-  ];
-
   private newsItems: NewsItem[] = [
     {
       title: 'title 1',
@@ -61,10 +42,15 @@ export class HomeComponent implements OnInit {
   constructor(private contentfulService: ContentfulService) { }
 
   ngOnInit() {
-      this.contentfulService.getProducts()
+    this.loadProducts();
+  }
+
+  // Load products from contentful API
+  loadProducts() {
+    this.contentfulService.getProducts()
       .then(products => {
         this.products = products;
         console.log(products);
-      })
+      });
   }
 }
