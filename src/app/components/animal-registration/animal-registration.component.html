@@ -1,3 +1,23 @@
-<p>
-  animal-registration works!
-</p>
+<div class="row animal-registration-content d-flex justify-content-center">
+  <div class="animal-registration-content__call-to-action">
+
+    <h1 class="animal-registration-content__call-to-action--title">
+      {{ animalRegistrationPage?.fields.title }}
+    </h1>
+    <h2 class="animal-registration-content__call-to-action--subtitle">
+      {{ animalRegistrationPage?.fields.subtitle }}
+    </h2>
+    <p class="animal-registration-content__call-to-action--preface">
+      {{ animalRegistrationPage?.fields.preface }}
+    </p>
+
+    <blockquote class="animal-registration-content__call-to-action--banner">
+      {{ animalRegistrationPage?.fields.banner }}
+    </blockquote>
+
+    <div markdown [data]="animalRegistrationPage?.fields.body" class="animal-registration-content__call-to-action--content">
+    </div>
+  </div>
+
+</div>
+

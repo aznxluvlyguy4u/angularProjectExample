@@ -50,7 +50,6 @@ export class HomeComponent implements OnInit {
     this.contentfulService.getProducts()
       .then(products => {
         this.products = products;
-        console.log(products);
       });
   }
 }

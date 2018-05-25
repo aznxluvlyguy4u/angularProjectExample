@@ -1,3 +1,23 @@
-<p>
-  breeding-farm works!
-</p>
+<div class="row breeding-farm-content d-flex justify-content-center">
+  <div class="breeding-farm-content__call-to-action">
+
+    <h1 class="breeding-farm-content__call-to-action--title">
+      {{ breedingFarmPage?.fields.title }}
+    </h1>
+    <h2 class="breeding-farm-content__call-to-action--subtitle">
+      {{ breedingFarmPage?.fields.subtitle }}
+    </h2>
+    <p class="breeding-farm-content__call-to-action--preface">
+      {{ breedingFarmPage?.fields.preface }}
+    </p>
+
+    <blockquote class="breeding-farm-content__call-to-action--banner">
+      {{ breedingFarmPage?.fields.banner }}
+    </blockquote>
+
+    <div markdown [data]="breedingFarmPage?.fields.body" class="breeding-farm-content__call-to-action--content">
+    </div>
+  </div>
+
+</div>
+

@@ -30,33 +30,6 @@ export class AnimalHealthComponent implements OnInit {
 
   private animalHealthPage: Entry<any>;
 
-  // private animalHealthArticles: AnimalHealthArticle[] = [
-  //   {
-  //     topic: 'DIERGEZONDHEID',
-  //     title: 'ZWOEGERZIEKTE',
-  //     image: 'assets/images/animal-health-article-1.jpg',
-  //     caption: 'zwoegerziekte'
-  //   },
-  //   {
-  //     topic: 'DIERGEZONDHEID',
-  //     title: 'CL (CASEOUS LYMPHADENITIS)',
-  //     image: 'assets/images/animal-health-article-2.jpg',
-  //     caption: 'CL (caseous lymphadenitis)'
-  //   },
-  //   {
-  //     topic: 'DIERGEZONDHEID',
-  //     title: 'BRUCELLA MELITENSIS',
-  //     image: 'assets/images/animal-health-article-3.jpg',
-  //     caption: 'brucella melitensis'
-  //   },
-  //   {
-  //     topic: 'DIERGEZONDHEID',
-  //     title: 'SCRAPIE',
-  //     image: 'assets/images/animal-health-article-4.jpg',
-  //     caption: 'scrapie'
-  //   }
-  // ];
-
   private animalHealthBanners: AnimalHealthBanner[] = [
     {
       backgroundColor: '#f0f0f0',
@@ -83,12 +56,11 @@ export class AnimalHealthComponent implements OnInit {
     this.loadAnimalHealthPage();
   }
 
-  // Load specific page from contentful API
+  // Load specific AnimalHealth page from contentful API
   loadAnimalHealthPage() {
     this.contentfulService.getAnimalHealthPage()
       .then(animalHealthPage => {
         this.animalHealthPage = animalHealthPage;
-        console.log(animalHealthPage);
       });
   }
 
@@ -97,7 +69,6 @@ export class AnimalHealthComponent implements OnInit {
     this.contentfulService.getAnimalHealthArticles()
       .then(animalHealthArticles => {
         this.animalHealthArticles = animalHealthArticles;
-        console.log(animalHealthArticles);
       });
   }
 }

@@ -9,7 +9,6 @@ export class MainCarouselService implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.defaultImageSrc);
   }
 
   setDefaultImageSrc(image: string) {

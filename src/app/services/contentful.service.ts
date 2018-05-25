@@ -22,7 +22,9 @@ const CONFIG = {
   },
 
   pageEntryIds: {
-    animalHealthEntryId: '1DHVHhWtKI64u4QwG2G6Mw',
+    animalHealthPageEntryId: '1DHVHhWtKI64u4QwG2G6Mw',
+    animalRegistrationPageEntryId: '5kGcP25yQEeAiKmsQeuYIk',
+    breedingFarmPageEntryId: '2h0sLKScpyye8oyqmiagQ0',
   }
 }
 
@@ -35,18 +37,29 @@ export class ContentfulService {
 
   constructor() { }
 
-  getProducts(query?: object): Promise<Entry<any>[]> {
-    return this.cdaClient.getEntries(Object.assign({
-      content_type: CONFIG.contentTypeIds.product
-    }, query))
-    .then(res => res.items);
+  getBreedingFarmPage(): Promise<Entry<any>> {
+    return this.cdaClient.getEntry(
+      CONFIG.pageEntryIds.breedingFarmPageEntryId
+    );
+  }
+
+  getAnimalRegistrationPage(): Promise<Entry<any>> {
+    return this.cdaClient.getEntry(
+      CONFIG.pageEntryIds.animalRegistrationPageEntryId
+    );
   }
 
   getAnimalHealthPage(): Promise<Entry<any>> {
     return this.cdaClient.getEntry(
-      CONFIG.pageEntryIds.animalHealthEntryId
-    )
-      .then(res => res);
+      CONFIG.pageEntryIds.animalHealthPageEntryId
+    );
+  }
+
+  getProducts(query?: object): Promise<Entry<any>[]> {
+    return this.cdaClient.getEntries(Object.assign({
+      content_type: CONFIG.contentTypeIds.product
+    }, query))
+      .then(res => res.items);
   }
 
   getAnimalHealthArticles(query?: object): Promise<Entry<any>[]> {
