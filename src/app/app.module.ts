@@ -5,7 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainCarouselService } from './services/main-carousel.service';
 import { ContentfulService } from './services/contentful.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { CarouselModule} from 'ngx-bootstrap/carousel';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { MarkdownModule } from 'ngx-markdown';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -58,7 +59,8 @@ const appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     NgbModule.forRoot(),
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    MarkdownModule.forRoot()
   ],
   providers: [
     ContentfulService,
