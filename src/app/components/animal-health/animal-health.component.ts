@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {ContentfulService} from '../../services/contentful.service';
 import {Entry} from 'contentful';
 
@@ -21,11 +21,14 @@ interface AnimalHealthBanner {
 @Component({
   selector: 'app-animal-health',
   templateUrl: './animal-health.component.html',
-  styleUrls: ['./animal-health.component.scss']
+  styleUrls: ['./animal-health.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class AnimalHealthComponent implements OnInit {
 
   private animalHealthArticles: Entry<any>[] = [];
+
+  private animalHealthPage: Entry<any>;
 
   // private animalHealthArticles: AnimalHealthArticle[] = [
   //   {
@@ -77,6 +80,16 @@ export class AnimalHealthComponent implements OnInit {
 
   ngOnInit() {
     this.loadAnimalHealthArticles();
+    this.loadAnimalHealthPage();
+  }
+
+  // Load specific page from contentful API
+  loadAnimalHealthPage() {
+    this.contentfulService.getAnimalHealthPage()
+      .then(animalHealthPage => {
+        this.animalHealthPage = animalHealthPage;
+        console.log(animalHealthPage);
+      });
   }
 
   // Load animalHealthArticles from contentful API

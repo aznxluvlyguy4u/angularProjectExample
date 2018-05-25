@@ -17,7 +17,12 @@ const CONFIG = {
 
   contentTypeIds: {
     product: 'product',
+    page: 'page',
     animalHealthArticle: 'animalHealthArticle'
+  },
+
+  pageEntryIds: {
+    animalHealthEntryId: '1DHVHhWtKI64u4QwG2G6Mw',
   }
 }
 
@@ -35,6 +40,13 @@ export class ContentfulService {
       content_type: CONFIG.contentTypeIds.product
     }, query))
     .then(res => res.items);
+  }
+
+  getAnimalHealthPage(): Promise<Entry<any>> {
+    return this.cdaClient.getEntry(
+      CONFIG.pageEntryIds.animalHealthEntryId
+    )
+      .then(res => res);
   }
 
   getAnimalHealthArticles(query?: object): Promise<Entry<any>[]> {

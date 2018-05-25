@@ -1,51 +1,21 @@
 <div class="row animal-health-content d-flex justify-content-center">
   <div class="animal-health-content__call-to-action">
-    <p class="animal-health-content__call-to-action--title">
-      STAP NU EENVOUDIG OVER
-    </p>
-    <p class="animal-health-content__call-to-action--subtitle">
-      KWALITEIT EN SCHERPE TARIEVEN KUNNEN HEEL GOED SAMEN GAAN.
-    </p>
+
+    <h1 class="animal-health-content__call-to-action--title">
+      {{ animalHealthPage?.fields.title }}
+    </h1>
+    <h2 class="animal-health-content__call-to-action--subtitle">
+      {{ animalHealthPage?.fields.subtitle }}
+    </h2>
     <p class="animal-health-content__call-to-action--preface">
-      Al onze diergezondheidsprogramma's zijn ISO 9001:2008 gecertificeerd en worden voor exportdoeleinden geaccepteerd door de NVWA. Door RVO is NSFO gemandateerd voor de uitgifte van officiële scrapie resistent certificaten. Ons CL-programma is erkend door de Vereniging Kwaliteitszorg Geitenhouderij Nederland (VKGN). En dat alles natuurlijk tegen de scherpe tarieven die u van ons gewend bent.
+      {{ animalHealthPage?.fields.preface }}
     </p>
 
-    <div class="animal-health-content__call-to-action--banner">
-      <p>Overstappen is heel eenvoudig, en kan met behoud van status.</p>
-    </div>
+    <blockquote class="animal-health-content__call-to-action--banner">
+      {{ animalHealthPage?.fields.banner }}
+    </blockquote>
 
-    <div class="animal-health-content__call-to-action--content">
-      <p class="animal-health-content__call-to-action--content__heading">
-        Hoe stap ik over?
-      </p>
-      <p class="animal-health-content__call-to-action--content__text">
-        Zowel leden als niet leden van NSFO kunnen deelnemen aan de diergezondheidsprogramma's van NSFO. Omdat NSFO de resultaten van erkende programma van andere organisaties overneemt is een overstap gemakkelijk. Fokkers die hun diergezondheidsstatus willen laten registreren via NSFO wordt gevraagd informatie aan te dragen waaruit blijkt hoe de gezondheidsstatus is op het moment van aanmelding bij NSFO Diergezondheid. Dus alle uitslagen, verklaringen en certificaten welke zijn vastgesteld of uitgegevens door organisaties welke door het RVO en/of NVWA en/of VKGN worden geaccepteerd.
-      </p>
-    </div>
-
-    <div class="animal-health-content__call-to-action--content">
-      <p class="animal-health-content__call-to-action--content__heading">
-        Wat wil dit precies zeggen?
-      </p>
-
-      <ul class="animal-health-content__call-to-action--content__text">
-        <li>
-          Wanneer u wilt starten met het programma ter bestrijding van zwoegerziekte, CAE of CL, of u wilt starten met de Scrapie Certificering dan kunt u volstaan met alleen het aanmeldformulier (zie onder) in te zenden. Dit geldt dus voor bedrijven die (nog) geen gezondheidsstatus hebben voor deze aandoeningen.
-        </li>
-        <li>
-          Wanneer uw bedrijf al is gecertificeerd voor (een van) de genoemde aandoeningen bij de Gezondheidsdienst voor Dieren dan dient u verklaringen en/of certificaten toe te voegen bij de aanvraag. Dit kan via een eigen verklaring van de GD (let wel: deze wordt niet meer verstrekt wanneer u geen lid meer bent van de GD!). Een andere mogelijkheid is een kopie van de certificaten mee te sturen. Naast de documenten is van belang dat u verklaart dat u sinds de datum van de verklaring of certificaat geen dieren hebt aangevoerd van niet officieel vrije bedrijven.
-        </li>
-        <li>
-          Staat u bij de GD 'in observatie' voor de ziekte CAE/CL doordat uw dieren contact hebben gehad met bij de NSFO gecertificeerde dieren? Stuur dan in plaats van de 'Eigen Verklaring' de brief die u van GD daarover heeft ontvangen toe. Dergelijke contacten zijn voor ons geen reden om u de CAE status te ontnemen.
-        </li>
-      </ul>
-
-      <p class="animal-health-content__call-to-action--content__text">
-        Is alles in orde dan kunt u direct een verklaring van ons ontvangen met datum ingang gelijk aan datum verklaring van het programma waar u aan deelnam en vinden toekomstige onderzoeken plaats op basis van deze datum.
-      </p>
-      <p class="animal-health-content__call-to-action--content__text">
-        Neem bij vragen contact met ons op. Wij zijn u graag van dienst!
-      </p>
+    <div markdown [data]="animalHealthPage?.fields.body" class="animal-health-content__call-to-action--content">
     </div>
   </div>
 

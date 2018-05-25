@@ -18,6 +18,7 @@
   color: #4a4a4a;
   text-decoration: underline;
   text-underline-position: under;
+  text-transform: uppercase;
   margin-bottom: 2rem;
 }
 
@@ -29,6 +30,7 @@
   line-height: 1.14;
   letter-spacing: 1.3px;
   text-align: left;
+  text-transform: uppercase;
   color: #419e66;
   margin-bottom: 2rem;
 }
@@ -63,7 +65,7 @@
 }
 
 .animal-health-content__call-to-action--content {
-  .animal-health-content__call-to-action--content__heading {
+  h3 {
     font-family: brandon_grotesquemedium;
     font-size: 22px;
     font-weight: 500;
@@ -75,7 +77,7 @@
     color: #459d68;
   }
 
-  .animal-health-content__call-to-action--content__text {
+  p, ul {
     font-family: SourceSerifPro;
     font-size: 16px;
     font-weight: normal;
@@ -85,10 +87,10 @@
     letter-spacing: normal;
     text-align: left;
     color: #4a4a4a;
+    margin-bottom: 2rem;
   }
-
-  margin-bottom: 2rem;
 }
+
 
 .animal-health-articles {
   padding-left: 15px;
