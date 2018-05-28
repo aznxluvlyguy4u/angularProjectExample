@@ -58,7 +58,8 @@ export class NavbarComponent implements OnInit {
     this.mainCarouselService.setDefaultImageSrc(this.getMainCarouselImageByRoute(this.location.path()));
   }
 
-  getMainCarouselImageByRoute(route: string) {
+  getMainCarouselImageByRoute(route?: string) {
+    route = route ? route : '/home';
     const result = this.navItems.find(function( navItem ) {
       return navItem.routerLink === route;
     });
