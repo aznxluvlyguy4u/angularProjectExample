@@ -10,7 +10,7 @@ import {Entry} from 'contentful';
 })
 export class AnimalRegistrationComponent implements OnInit {
 
-  private animalRegistrationPage: Entry<any>;
+  animalRegistrationPage: Entry<any>;
 
   constructor(private contentfulService: ContentfulService) { }
 

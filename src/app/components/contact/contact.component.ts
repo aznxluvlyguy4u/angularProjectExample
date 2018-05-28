@@ -10,7 +10,7 @@ import {ContentfulService} from '../../services/contentful.service';
 })
 export class ContactComponent implements OnInit {
 
-  private contactPage: Entry<any>;
+  contactPage: Entry<any>;
 
   constructor(private contentfulService: ContentfulService) { }
 

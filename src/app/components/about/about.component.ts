@@ -10,7 +10,7 @@ import {ContentfulService} from '../../services/contentful.service';
 })
 export class AboutComponent implements OnInit {
 
-  private aboutPage: Entry<any>;
+  aboutPage: Entry<any>;
 
   constructor(private contentfulService: ContentfulService) { }
 

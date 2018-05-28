@@ -26,11 +26,11 @@ interface AnimalHealthBanner {
 })
 export class AnimalHealthComponent implements OnInit {
 
-  private animalHealthArticles: Entry<any>[] = [];
+  animalHealthArticles: Entry<any>[] = [];
 
-  private animalHealthPage: Entry<any>;
+  animalHealthPage: Entry<any>;
 
-  private animalHealthBanners: AnimalHealthBanner[] = [
+  animalHealthBanners: AnimalHealthBanner[] = [
     {
       backgroundColor: '#f0f0f0',
       color: '#4a4a4a',

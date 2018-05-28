@@ -10,7 +10,7 @@ import {Location} from '@angular/common';
 export class NavbarComponent implements OnInit {
 
   // Unused, for testing purpose only
-  private navItems: any[] = [
+  navItems: any[] = [
     {
       routerLink: '/home',
       mainCarouselImage: 'assets/images/sheeps-home@2x.jpg',

@@ -10,7 +10,7 @@ import {ContentfulService} from '../../services/contentful.service';
 })
 export class BreedingFarmComponent implements OnInit {
 
-  private breedingFarmPage: Entry<any>;
+  breedingFarmPage: Entry<any>;
 
   constructor(private contentfulService: ContentfulService) { }
 

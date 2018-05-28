@@ -9,9 +9,9 @@ import { Entry } from 'contentful';
 })
 export class HomeComponent implements OnInit {
 
-  private products: Entry<any>[] = [];
+  products: Entry<any>[] = [];
 
-  private newsItems: Entry<any>[] = [];
+  newsItems: Entry<any>[] = [];
 
   constructor(private contentfulService: ContentfulService) { }
 
