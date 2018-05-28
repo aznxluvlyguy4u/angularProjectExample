@@ -17,6 +17,7 @@ const CONFIG = {
 
   contentTypeIds: {
     product: 'product',
+    newsItem: 'newsItem',
     page: 'page',
     animalHealthArticle: 'animalHealthArticle'
   },
@@ -25,6 +26,8 @@ const CONFIG = {
     animalHealthPageEntryId: '1DHVHhWtKI64u4QwG2G6Mw',
     animalRegistrationPageEntryId: '5kGcP25yQEeAiKmsQeuYIk',
     breedingFarmPageEntryId: '2h0sLKScpyye8oyqmiagQ0',
+    aboutPageEntryId: '11bLJVrPAIgyQAEEECGkg6',
+    contactPageEntryId: '2uZ8fqv2PykE2YSQ8AWqYq'
   }
 }
 
@@ -55,9 +58,28 @@ export class ContentfulService {
     );
   }
 
+  getAboutPage(): Promise<Entry<any>> {
+    return this.cdaClient.getEntry(
+      CONFIG.pageEntryIds.aboutPageEntryId
+    );
+  }
+
+  getContactPage(): Promise<Entry<any>> {
+    return this.cdaClient.getEntry(
+      CONFIG.pageEntryIds.contactPageEntryId
+    );
+  }
+
   getProducts(query?: object): Promise<Entry<any>[]> {
     return this.cdaClient.getEntries(Object.assign({
       content_type: CONFIG.contentTypeIds.product
+    }, query))
+      .then(res => res.items);
+  }
+
+  getNewsItems(query?: object): Promise<Entry<any>[]> {
+    return this.cdaClient.getEntries(Object.assign({
+      content_type: CONFIG.contentTypeIds.newsItem
     }, query))
       .then(res => res.items);
   }

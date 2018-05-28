@@ -1,6 +1,8 @@
 <div class="product">
-  <img class="product__image" src="{{ product.fields.icon.fields.file.url }}" alt="Generic placeholder image">
-  <p class="product__name">{{ product.fields.name }}</p>
-  <p class="product__description">{{ product.fields.description }}</p>
+  <a [routerLink]="product.fields.route">
+    <img class="product__image" src="{{ product.fields.icon.fields.file.url }}" alt="Generic placeholder image">
+    <p class="product__name">{{ product.fields.name }}</p>
+    <p class="product__description">{{ product.fields.description }}</p>
+  </a>
   <div class="product__bottom"></div>
 </div><!-- /.col-lg-4 -->

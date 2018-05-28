@@ -1,5 +1,15 @@
-<div class="newsItem">
-  <div class="newsItem__image">
-    <img src="{{ newsItem.image }}" alt="{{ newsItem.caption }}">
+<div class="newsItem col-sm-12 container" [ngStyle]="{'backgroundImage': 'url(' + newsItem.fields.image.fields.file.url + ')'}">
+  <div class="newsItem__banner col-sm-12 row">
+    <div class="newsItem__banner--icon col-2">
+      <img src="{{ newsItem.fields.icon.fields.file.url }}">
+    </div>
+    <div class="newsItem__banner--text col-10">
+      <p class="newsItem__banner--text__title mb-1">
+        {{ newsItem.fields.title }}
+      </p>
+      <p class="newsItem__banner--text__subtitle">
+        {{ newsItem.fields.subtitle }}
+      </p>
+    </div>
   </div>
 </div>

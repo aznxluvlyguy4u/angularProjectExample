@@ -2,19 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ContentfulService } from '../../services/contentful.service';
 import { Entry } from 'contentful';
 
-interface Product {
-  productImage: string;
-  productName: string;
-  productDescription: string;
-}
-
-interface NewsItem {
-  title: string;
-  body: string;
-  image: string;
-  caption: string;
-}
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -24,25 +11,13 @@ export class HomeComponent implements OnInit {
 
   private products: Entry<any>[] = [];
 
-  private newsItems: NewsItem[] = [
-    {
-      title: 'title 1',
-      body: 'body 1',
-      image: 'assets/images/nieuwsitem-01.jpg',
-      caption: 'pretty image1'
-    },
-    {
-      title: 'title 2',
-      body: 'body 2',
-      image: 'assets/images/nieuwsitem-02.jpg',
-      caption: 'pretty image2'
-    }
-  ]
+  private newsItems: Entry<any>[] = [];
 
   constructor(private contentfulService: ContentfulService) { }
 
   ngOnInit() {
     this.loadProducts();
+    this.loadNewsItems();
   }
 
   // Load products from contentful API
@@ -50,6 +25,14 @@ export class HomeComponent implements OnInit {
     this.contentfulService.getProducts()
       .then(products => {
         this.products = products;
+      });
+  }
+
+  loadNewsItems() {
+    this.contentfulService.getNewsItems()
+      .then(newsItems => {
+        this.newsItems = newsItems;
+        console.log(newsItems);
       });
   }
 }
