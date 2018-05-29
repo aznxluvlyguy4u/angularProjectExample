@@ -1,5 +1,5 @@
 <carousel class="row" [showIndicators]="false" [interval]="false">
   <slide>
-    <img [src]="image" alt="main image" style="display: block; width: 100%;">
+    <img *ngIf="image" [src]="image" alt="main image" style="display: block; width: 100%;">
   </slide>
 </carousel>
