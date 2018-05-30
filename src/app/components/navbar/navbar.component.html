@@ -2,7 +2,7 @@
   <div class="collapse navbar-collapse col-12" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li *ngFor="let navItem of navItems" class="nav-item">
-        <a [routerLink]="navItem.routerLink" (click)="changeMainCarouselImage(navItem.mainCarouselImage)" routerLinkActive="active" class="nav-link">{{ navItem.title }}
+        <a [routerLink]="navItem.routerLink" routerLinkActive="active" class="nav-link">{{ navItem.title }}
           <div class="nav-item__bottom mx-auto"></div>
         </a>
       </li>

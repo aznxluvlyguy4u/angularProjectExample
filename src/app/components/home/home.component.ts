@@ -32,7 +32,6 @@ export class HomeComponent implements OnInit {
     this.contentfulService.getNewsItems()
       .then(newsItems => {
         this.newsItems = newsItems;
-        console.log(newsItems);
       });
   }
 }

@@ -1,5 +1,5 @@
 import {Component, OnInit, OnDestroy} from '@angular/core';
-import {MainCarouselService} from '../../services/main-carousel.service';
+import {Router, RoutesRecognized} from '@angular/router';
 
 @Component({
   selector: 'app-main-carousel',
@@ -12,17 +12,15 @@ export class MainCarouselComponent implements OnInit, OnDestroy {
   subscription: any;
 
   constructor(
-    private mainCarouselService: MainCarouselService,
+    private router: Router,
   ) { }
 
   ngOnInit() {
-    this.image = this.mainCarouselService.getDefaultImageSrc();
-    this.subscription = this.mainCarouselService.getEventEmitter()
-      .subscribe(image => this.setImageSrc(image));
-  }
-
-  setImageSrc(image: string) {
-    this.image = image;
+    this.subscription = this.router.events.subscribe((data) => {
+      if (data instanceof RoutesRecognized) {
+        this.image = data.state.root.firstChild.data.mainCarouselImage;
+      }
+    });
   }
 
   ngOnDestroy() {
