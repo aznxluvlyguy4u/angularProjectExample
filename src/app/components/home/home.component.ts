@@ -28,6 +28,7 @@ export class HomeComponent implements OnInit {
       });
   }
 
+  // Load newsItems from contentful API
   loadNewsItems() {
     this.contentfulService.getNewsItems()
       .then(newsItems => {

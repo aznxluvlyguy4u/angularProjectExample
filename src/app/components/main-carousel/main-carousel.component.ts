@@ -18,6 +18,7 @@ export class MainCarouselComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.subscription = this.router.events.subscribe((data) => {
       if (data instanceof RoutesRecognized) {
+        console.log(data);
         this.image = data.state.root.firstChild.data.mainCarouselImage;
       }
     });

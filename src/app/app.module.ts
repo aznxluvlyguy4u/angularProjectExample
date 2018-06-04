@@ -6,6 +6,7 @@ import { ContentfulService } from './services/contentful.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { MarkdownModule } from 'ngx-markdown';
+import { NewsModule } from './modules/news/news.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -13,18 +14,16 @@ import { ContactComponent } from './components/contact/contact.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AnimalHealthComponent } from './components/animal-health/animal-health.component';
 import { BreedingFarmComponent } from './components/breeding-farm/breeding-farm.component';
-import { NewsComponent } from './components/news/news.component';
 import { AboutComponent } from './components/about/about.component';
 import { AnimalRegistrationComponent } from './components/animal-registration/animal-registration.component';
-import { NewsItemComponent } from './components/news-item/news-item.component';
 import { MainCarouselComponent } from './components/main-carousel/main-carousel.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductComponent } from './components/product/product.component';
 import { AnimalHealthArticleComponent } from './components/animal-health-article/animal-health-article.component';
 import { BannerComponent } from './components/banner/banner.component';
-import { NewsDetailComponent } from './components/news-detail/news-detail.component';
 import { LoginBarComponent } from './components/login-bar/login-bar.component';
+import { NewsItemComponent } from './components/news-item/news-item.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -38,17 +37,6 @@ const appRoutes: Routes = [
   { path: 'breeding-farm', component: BreedingFarmComponent, data: {
     title: 'Breeding Farm', mainCarouselImage: 'assets/images/sheeps-animal-health@2x.jpg'
   }},
-  { path: 'news', component: NewsComponent, data: { title: 'News', mainCarouselImage: 'assets/images/sheeps-animal-health@2x.jpg' },
-    children: [
-      {
-        path: ':id',
-        component: NewsDetailComponent,
-        data: {
-          title: 'News',
-          mainCarouselImage: 'assets/images/sheeps-animal-health@2x.jpg'
-        }
-      }
-    ] },
   { path: 'about', component: AboutComponent, data: {
     title: 'About', mainCarouselImage: 'assets/images/sheeps-animal-health@2x.jpg'
   }},
@@ -65,7 +53,6 @@ const appRoutes: Routes = [
     NavbarComponent,
     AnimalHealthComponent,
     BreedingFarmComponent,
-    NewsComponent,
     AboutComponent,
     AnimalRegistrationComponent,
     NewsItemComponent,
@@ -75,15 +62,15 @@ const appRoutes: Routes = [
     ProductComponent,
     AnimalHealthArticleComponent,
     BannerComponent,
-    NewsDetailComponent,
-    LoginBarComponent
+    LoginBarComponent,
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
     NgbModule.forRoot(),
     CarouselModule.forRoot(),
-    MarkdownModule.forRoot()
+    MarkdownModule.forRoot(),
+    NewsModule,
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [
     ContentfulService,

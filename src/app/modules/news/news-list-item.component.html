@@ -1,0 +1,17 @@
+<a [routerLink]="['/news', newsItem.fields.entryId]" class="nav-link list-group-item clearfix">
+  <div class="newsListItem col-sm-12 container" [ngStyle]="{'backgroundImage': 'url(' + newsItem.fields.image.fields.file.url + ')'}">
+    <div class="newsListItem__banner col-sm-12 row">
+      <div class="newsListItem__banner--icon col-2">
+        <img src="{{ newsItem.fields.icon.fields.file.url }}">
+      </div>
+      <div class="newsListItem__banner--text col-10">
+        <p class="newsListItem__banner--text__title mb-1">
+          {{ newsItem.fields.title }}
+        </p>
+        <p class="newsListItem__banner--text__subtitle">
+          {{ newsItem.fields.subtitle }}
+        </p>
+      </div>
+    </div>
+  </div>
+</a>

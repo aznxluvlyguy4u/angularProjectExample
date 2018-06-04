@@ -1,4 +1,4 @@
-<a href="#">
+<a [routerLink]="['/news', newsItem.fields.entryId]">
   <div class="newsItem col-sm-12 container" [ngStyle]="{'backgroundImage': 'url(' + newsItem.fields.image.fields.file.url + ')'}">
       <div class="newsItem__banner col-sm-12 row">
         <div class="newsItem__banner--icon col-2">
@@ -15,3 +15,4 @@
       </div>
   </div>
 </a>
+<router-outlet></router-outlet>

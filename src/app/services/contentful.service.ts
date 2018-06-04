@@ -84,6 +84,16 @@ export class ContentfulService {
       .then(res => res.items);
   }
 
+  getNewsItem(id?: string): Promise<Entry<any>> {
+    return this.cdaClient.getEntry(
+      id
+    );
+  }
+
+  getAsset(id?: string): Promise<Entry<any>> {
+    return this.cdaClient.getAsset(id);
+  }
+
   getAnimalHealthArticles(query?: object): Promise<Entry<any>[]> {
     return this.cdaClient.getEntries(Object.assign({
       content_type: CONFIG.contentTypeIds.animalHealthArticle

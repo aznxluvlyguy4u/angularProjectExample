@@ -1,0 +1,26 @@
+
+<div class="row">
+  <div class="col-3">
+    <ul>
+      <li *ngFor="let item of newsItems"><a routerLink="/news/{{item.fields.entryId}}">{{item.fields?.title}}</a></li>
+    </ul>
+  </div>
+  <div class="col-9">
+
+    <div class="row">
+      <div class="col">
+        <a routerLink="/news" class="btn btn-primary">Overzicht</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h1>{{newsItem?.fields?.title}}</h1>
+        <img [src]="newsItemImage?.fields?.file?.url" alt="">
+        <p>
+          {{newsItem?.fields?.body}}
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
