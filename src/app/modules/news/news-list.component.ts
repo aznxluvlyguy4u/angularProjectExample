@@ -22,7 +22,6 @@ export class NewsListComponent implements OnInit {
     this.contentfulService.getNewsItems()
       .then(newsItems => {
         this.newsItems = newsItems;
-        console.log(newsItems);
       });
   }
 

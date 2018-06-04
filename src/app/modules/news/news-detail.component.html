@@ -15,7 +15,7 @@
     <div class="row">
       <div class="col">
         <h1>{{newsItem?.fields?.title}}</h1>
-        <img [src]="newsItemImage?.fields?.file?.url" alt="">
+        <img *ngIf="newsItemImage" [src]="newsItemImage?.fields?.file?.url" alt="">
         <p>
           {{newsItem?.fields?.body}}
         </p>

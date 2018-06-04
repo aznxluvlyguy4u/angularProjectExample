@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ContentfulService } from '../../services/contentful.service';
 import { ActivatedRoute } from '@angular/router';
-import {Entry, EntryCollection} from 'contentful';
-import { Observable } from 'rxjs/Observable';
+import { Entry } from 'contentful';
 
 @Component({
   selector: 'app-news-detail',
@@ -36,7 +35,6 @@ export class NewsDetailComponent implements OnInit {
       this.contentfulService.getNewsItem(params['id'])
         .then(newsItem => {
           this.newsItem = newsItem;
-          console.log(newsItem);
         })
         .then(asset => {
           this.contentfulService.getAsset(this.newsItem.fields.image.sys.id)

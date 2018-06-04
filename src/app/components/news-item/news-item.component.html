@@ -1,6 +1,6 @@
 <a [routerLink]="['/news', newsItem.fields.entryId]">
-  <div class="newsItem col-sm-12 container" [ngStyle]="{'backgroundImage': 'url(' + newsItem.fields.image.fields.file.url + ')'}">
-      <div class="newsItem__banner col-sm-12 row">
+  <div class="newsItem col-12 container" [ngStyle]="{'backgroundImage': 'url(' + newsItem.fields.image.fields.file.url + ')'}">
+      <div class="newsItem__banner col-12 row">
         <div class="newsItem__banner--icon col-2">
           <img src="{{ newsItem.fields.icon.fields.file.url }}">
         </div>
