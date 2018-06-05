@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="products p-4 d-flex justify-content-around">
+  <div class="products p-4 d-flex justify-content-around flex-wrap">
     <app-product *ngFor="let product of products" class="col-3 text-center" [product]="product"></app-product>
   </div>
 </div>
@@ -23,7 +23,7 @@
 </div>
 
 <div class="row">
-  <div class="d-flex justify-content-around col-12 latest-news">
-    <app-news-item *ngFor="let newsItem of newsItems" [newsItem]="newsItem"></app-news-item>
+  <div class="d-flex justify-content-around flex-wrap pt-4 pb-4 latest-news col-12">
+    <app-news-item class="col-12 col-md-6" *ngFor="let newsItem of newsItems" [newsItem]="newsItem"></app-news-item>
   </div>
 </div>

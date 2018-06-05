@@ -1,37 +1,30 @@
-.navbar {
-  font-family: brandon_grotesquemedium;
-  font-size: 12px;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: 0.5px;
-  text-align: center;
-  color: #4a4a4a;
+.nav-item {
+  .nav-link {
+    font-family: brandon_grotesquemedium;
+    font-size: 12px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    color: #9b9b9b;
 
-  .nav-item__bottom {
-    display:none;
+    .nav-item__bottom {
+      background-color: #f8f8f8;
+    }
   }
 
   & .active {
     font-family: brandon_grotesquebold;
+    font-size: 12px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    color: #4a4a4a;
 
     .nav-item__bottom {
-      display:block;
+      background-color: #389f79;
     }
-  }
-
-  ul {
-    display: flex;
-    align-items: stretch; /* Default */
-    justify-content: space-between;
-    width: 100%;
-    margin: 0;
-    padding: 0rem 6rem;
-  }
-
-  li {
-    display: block;
-    flex: 0 1 auto; /* Default */
   }
 }
 
