@@ -7,8 +7,8 @@
     <h2 class="animal-health-content__call-to-action--subtitle">
       {{ animalHealthPage?.fields.subtitle }}
     </h2>
-    <p class="animal-health-content__call-to-action--preface">
-      {{ animalHealthPage?.fields.preface }}
+
+    <p markdown [data]="animalHealthPage?.fields.preface" class="animal-health-content__call-to-action--preface">
     </p>
 
     <blockquote class="animal-health-content__call-to-action--banner">

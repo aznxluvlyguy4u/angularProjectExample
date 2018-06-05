@@ -4,11 +4,12 @@
     <h1 class="animal-registration-content__call-to-action--title">
       {{ animalRegistrationPage?.fields.title }}
     </h1>
+
     <h2 class="animal-registration-content__call-to-action--subtitle">
       {{ animalRegistrationPage?.fields.subtitle }}
     </h2>
-    <p class="animal-registration-content__call-to-action--preface">
-      {{ animalRegistrationPage?.fields.preface }}
+
+    <p markdown [data]="animalRegistrationPage?.fields.preface" class="animal-registration-content__call-to-action--preface">
     </p>
 
     <blockquote class="animal-registration-content__call-to-action--banner">
@@ -17,6 +18,7 @@
 
     <div markdown [data]="animalRegistrationPage?.fields.body" class="animal-registration-content__call-to-action--content">
     </div>
+
   </div>
 
 </div>

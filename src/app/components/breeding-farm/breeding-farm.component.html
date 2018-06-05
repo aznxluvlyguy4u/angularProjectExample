@@ -4,11 +4,12 @@
     <h1 class="breeding-farm-content__call-to-action--title">
       {{ breedingFarmPage?.fields.title }}
     </h1>
+
     <h2 class="breeding-farm-content__call-to-action--subtitle">
       {{ breedingFarmPage?.fields.subtitle }}
     </h2>
-    <p class="breeding-farm-content__call-to-action--preface">
-      {{ breedingFarmPage?.fields.preface }}
+
+    <p markdown [data]="breedingFarmPage?.fields.preface" class="breeding-farm-content__call-to-action--preface">
     </p>
 
     <blockquote class="breeding-farm-content__call-to-action--banner">

@@ -4,11 +4,12 @@
     <h1 class="about-content__call-to-action--title">
       {{ aboutPage?.fields.title }}
     </h1>
+
     <h2 class="about-content__call-to-action--subtitle">
       {{ aboutPage?.fields.subtitle }}
     </h2>
-    <p class="about-content__call-to-action--preface">
-      {{ aboutPage?.fields.preface }}
+
+    <p markdown [data]="aboutPage?.fields.preface" class="about-content__call-to-action--preface">
     </p>
 
     <blockquote class="about-content__call-to-action--banner">
@@ -17,6 +18,7 @@
 
     <div markdown [data]="aboutPage?.fields.body" class="about-content__call-to-action--content">
     </div>
+
   </div>
 
 </div>
