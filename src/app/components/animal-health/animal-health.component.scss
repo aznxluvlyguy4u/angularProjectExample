@@ -65,6 +65,34 @@
 }
 
 .animal-health-content__call-to-action--content {
+  h1 {
+    font-family: brandon_grotesquemedium;
+    font-size: 19px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 2.5px;
+    color: #4a4a4a;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-family: brandon_grotesqueblack;
+    font-size: 28px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.14;
+    letter-spacing: 1.3px;
+    text-align: left;
+    text-transform: uppercase;
+    color: #419e66;
+    margin-bottom: 2rem;
+  }
+
   h3 {
     font-family: brandon_grotesquemedium;
     font-size: 22px;
