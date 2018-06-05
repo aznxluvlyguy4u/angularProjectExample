@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import { ContentfulService } from '../../services/contentful.service';
 import { ActivatedRoute } from '@angular/router';
 import { Entry } from 'contentful';
@@ -6,7 +6,8 @@ import { Entry } from 'contentful';
 @Component({
   selector: 'app-news-detail',
   templateUrl: './news-detail.component.html',
-  styleUrls: ['./news-detail.component.scss']
+  styleUrls: ['./news-detail.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class NewsDetailComponent implements OnInit {
 

@@ -7,14 +7,13 @@ import { NewsListItemComponent } from './news-list-item.component';
 
 import { NewsService } from './news.service';
 import { NewsRoutingModule } from './news-routing.module';
+import {MarkdownModule} from 'ngx-markdown';
 
 @NgModule({
   imports: [
     CommonModule,
-    // NewsListComponent,
-    // NewsDetailComponent,
-    // NewsListItemComponent,
     NewsRoutingModule,
+    MarkdownModule.forChild(),
   ],
   declarations: [
     NewsListComponent,
