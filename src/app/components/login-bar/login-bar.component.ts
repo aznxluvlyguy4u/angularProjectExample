@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {environment} from '../../../environments/environment';
 
 @Component({
   selector: 'app-login-bar',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login-bar.component.scss']
 })
 export class LoginBarComponent implements OnInit {
+
+  loginUrl = environment.loginUrl;
 
   constructor() { }
 
