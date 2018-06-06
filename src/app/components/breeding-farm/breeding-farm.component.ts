@@ -1,6 +1,7 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {Entry} from 'contentful';
 import {ContentfulService} from '../../services/contentful.service';
+import {MainCarouselService} from '../../services/main-carousel.service';
 
 @Component({
   selector: 'app-breeding-farm',
@@ -12,7 +13,10 @@ export class BreedingFarmComponent implements OnInit {
 
   breedingFarmPage: Entry<any>;
 
-  constructor(private contentfulService: ContentfulService) { }
+  constructor(
+    private contentfulService: ContentfulService,
+    private mainCarouselService: MainCarouselService
+  ) { }
 
   ngOnInit() {
     this.loadBreedingFarmPage();
@@ -23,6 +27,12 @@ export class BreedingFarmComponent implements OnInit {
     this.contentfulService.getBreedingFarmPage()
       .then(breedingFarmPage => {
         this.breedingFarmPage = breedingFarmPage;
+      })
+      .then(asset => {
+        this.contentfulService.getAsset(this.breedingFarmPage.fields.carouselImage.sys.id)
+          .then(mainCarouselImage => {
+            this.mainCarouselService.changeImage(mainCarouselImage.fields.file.url);
+          });
       });
   }
 

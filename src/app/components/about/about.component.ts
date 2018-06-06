@@ -1,6 +1,7 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {Entry} from 'contentful';
 import {ContentfulService} from '../../services/contentful.service';
+import {MainCarouselService} from '../../services/main-carousel.service';
 
 @Component({
   selector: 'app-about',
@@ -12,7 +13,10 @@ export class AboutComponent implements OnInit {
 
   aboutPage: Entry<any>;
 
-  constructor(private contentfulService: ContentfulService) { }
+  constructor(
+    private contentfulService: ContentfulService,
+    private mainCarouselService: MainCarouselService
+  ) { }
 
   ngOnInit() {
     this.loadAboutPage();
@@ -23,6 +27,12 @@ export class AboutComponent implements OnInit {
     this.contentfulService.getAboutPage()
       .then(aboutPage => {
         this.aboutPage = aboutPage;
+      })
+      .then(asset => {
+        this.contentfulService.getAsset(this.aboutPage.fields.carouselImage.sys.id)
+          .then(mainCarouselImage => {
+            this.mainCarouselService.changeImage(mainCarouselImage.fields.file.url);
+          });
       });
   }
 

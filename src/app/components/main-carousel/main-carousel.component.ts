@@ -1,29 +1,22 @@
-import {Component, OnInit, OnDestroy} from '@angular/core';
-import {Router, RoutesRecognized} from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {MainCarouselService} from '../../services/main-carousel.service';
 
 @Component({
   selector: 'app-main-carousel',
   templateUrl: './main-carousel.component.html',
   styleUrls: ['./main-carousel.component.scss'],
 })
-export class MainCarouselComponent implements OnInit, OnDestroy {
+export class MainCarouselComponent implements OnInit {
 
-  image: string;
-  subscription: any;
+  imageSrc: string;
 
   constructor(
-    private router: Router,
+    private mainCarouselService: MainCarouselService
   ) { }
 
   ngOnInit() {
-    this.subscription = this.router.events.subscribe((data) => {
-      if (data instanceof RoutesRecognized) {
-        this.image = data.state.root.firstChild.data.mainCarouselImage;
-      }
+    this.mainCarouselService.eventEmitter.subscribe(imageSrc => {
+      this.imageSrc = imageSrc;
     });
-  }
-
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
   }
 }

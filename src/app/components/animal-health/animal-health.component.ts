@@ -1,6 +1,7 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {ContentfulService} from '../../services/contentful.service';
 import {Entry} from 'contentful';
+import {MainCarouselService} from '../../services/main-carousel.service';
 
 interface AnimalHealthArticle {
   topic: string;
@@ -49,7 +50,10 @@ export class AnimalHealthComponent implements OnInit {
     }
   ];
 
-  constructor(private contentfulService: ContentfulService) { }
+  constructor(
+    private contentfulService: ContentfulService,
+    private mainCarouselService: MainCarouselService
+  ) { }
 
   ngOnInit() {
     this.loadAnimalHealthArticles();
@@ -61,6 +65,14 @@ export class AnimalHealthComponent implements OnInit {
     this.contentfulService.getAnimalHealthPage()
       .then(animalHealthPage => {
         this.animalHealthPage = animalHealthPage;
+      })
+      .then(asset => {
+        if (typeof this.animalHealthPage.fields.carouselImage !== 'undefined') {
+          this.contentfulService.getAsset(this.animalHealthPage.fields.carouselImage.sys.id)
+            .then(mainCarouselImage => {
+              this.mainCarouselService.changeImage(mainCarouselImage.fields.file.url);
+            });
+        }
       });
   }
 

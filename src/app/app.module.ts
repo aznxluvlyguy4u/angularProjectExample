@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { ContentfulService } from './services/contentful.service';
+import { MainCarouselService } from './services/main-carousel.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { MarkdownModule } from 'ngx-markdown';
@@ -27,22 +28,17 @@ import { NewsItemComponent } from './components/news-item/news-item.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent, data: { title: 'Home', mainCarouselImage: 'assets/images/sheeps-home@2x.jpg' } },
+  { path: 'home', component: HomeComponent, data: { title: 'Home' } },
   { path: 'animal-registration', component: AnimalRegistrationComponent, data: {
-    title: 'Animal Registration', mainCarouselImage: 'assets/images/sheeps-animal-health@2x.jpg'
-  }},
+    title: 'Animal Registration' }},
   { path: 'animal-health', component: AnimalHealthComponent, data: {
-    title: 'Animal Health', mainCarouselImage: 'assets/images/sheeps-animal-health@2x.jpg'
-  }},
+    title: 'Animal Health' }},
   { path: 'breeding-farm', component: BreedingFarmComponent, data: {
-    title: 'Breeding Farm', mainCarouselImage: 'assets/images/sheeps-animal-health@2x.jpg'
-  }},
+    title: 'Breeding Farm' }},
   { path: 'about', component: AboutComponent, data: {
-    title: 'About', mainCarouselImage: 'assets/images/sheeps-animal-health@2x.jpg'
-  }},
+    title: 'About' }},
   { path: 'contact', component: ContactComponent, data: {
-    title: 'Contact', mainCarouselImage: 'assets/images/sheeps-animal-health@2x.jpg'
-  }}
+    title: 'Contact' }}
 ];
 
 @NgModule({
@@ -74,6 +70,7 @@ const appRoutes: Routes = [
   ],
   providers: [
     ContentfulService,
+    MainCarouselService
   ],
   bootstrap: [AppComponent]
 })
