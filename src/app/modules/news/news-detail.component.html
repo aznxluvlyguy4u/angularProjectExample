@@ -1,15 +1,9 @@
 
 <div class="row news-detail pt-5 pb-5">
-  <div class="col-3 news-detail-bullets">
-    <ul>
-      <li *ngFor="let item of newsItems"><a routerLink="/news/{{item.fields.entryId}}">{{item.fields?.title}}</a></li>
-    </ul>
-  </div>
 
   <div class="col-9 row news-detail-content d-flex justify-content-center">
       <div class="col-12 row">
         <h1 class="col-12 news-detail-content__title">{{newsItem?.fields?.title}}</h1>
-
         <div class="col-12 news-detail-content__image-container">
           <img class="news-detail-content__image img-fluid" *ngIf="newsItemImage" [src]="newsItemImage?.fields?.file?.url" alt="">
         </div>
@@ -18,12 +12,17 @@
             <!--{{newsItem?.fields?.body}}-->
         </div>
       </div>
-
     <div class="row">
       <div class="col">
-        <a routerLink="/news" class="news-detail-content__back-button btn btn-primary">Terug naar overzicht</a>
+        <a routerLink="/news" class="news-detail-content__back-button btn btn-sm btn-outline-success">Terug naar overzicht</a>
       </div>
     </div>
-
   </div>
+
+  <div class="col-3 news-detail-bullets">
+    <ul>
+      <li *ngFor="let item of newsItems"><a routerLink="/news/{{item.fields.entryId}}">{{item.fields?.title}}</a></li>
+    </ul>
+  </div>
+
 </div>
