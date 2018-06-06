@@ -1,11 +1,10 @@
-<div class="row pt-5 pb-5 news-list">
-  <div class="col-3">
-    <ul>
-      <li *ngFor="let item of newsItems"><a routerLink="/news/{{item.fields.entryId}}">{{item.fields?.title}}</a></li>
-    </ul>
-  </div>
-  <div class="d-flex justify-content-around col-9 row latest-news">
+<div class="row news-list d-flex justify-content-center pt-5 pb-5">
+  <!--<div class="col-3">-->
+    <!--<ul>-->
+      <!--<li *ngFor="let item of newsItems"><a routerLink="/news/{{item.fields.entryId}}">{{item.fields?.title}}</a></li>-->
+    <!--</ul>-->
+  <!--</div>-->
+  <div class="d-flex justify-content-around col-10 row latest-news">
     <app-news-list-item class="col-12" *ngFor="let newsItem of newsItems" [newsItem]="newsItem"></app-news-list-item>
   </div>
 </div>
-<!--<router-outlet name="newsDetail"></router-outlet>-->

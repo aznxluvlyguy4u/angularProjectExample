@@ -1,17 +1,18 @@
-<a [routerLink]="['/news', newsItem.fields.entryId]" class="nav-link list-group-item clearfix">
-  <div class="newsListItem col-sm-12 container" [ngStyle]="{'backgroundImage': 'url(' + newsItem.fields.image.fields.file.url + ')'}">
-    <div class="newsListItem__banner col-sm-12 row">
-      <div class="newsListItem__banner--icon col-2">
-        <img src="{{ newsItem.fields.icon.fields.file.url }}">
-      </div>
-      <div class="newsListItem__banner--text col-10">
-        <p class="newsListItem__banner--text__title mb-1">
-          {{ newsItem.fields.title }}
+<!--<a [routerLink]="['/news', newsItem.fields.entryId]">-->
+  <div class="newsListItem mb-5 row d-flex flex-md-row flex-column-reverse border-bottom">
+      <div class="newsListItem-body col-12 col-md-8">
+        <h5 class="newsListItem-body__title">{{ newsItem.fields.title }}</h5>
+        <p class="newsListItem-body__datetime">
+          <span><i class="far fa-clock"></i></span>
+          {{ newsItem.fields.dateTime | date:'dd MMMM yyyy'}}
         </p>
-        <p class="newsListItem__banner--text__subtitle">
-          {{ newsItem.fields.subtitle }}
-        </p>
+        <p class="newsListItem-body__subtitle">{{ newsItem.fields.subtitle }}</p>
+        <p class="newsListItem-body__body">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a [routerLink]="['/news', newsItem.fields.entryId]" class="card-link">Meer...</a>
       </div>
+
+    <div class="newsListItem-image col-12 col-md-4">
+      <img class="img-fluid mb-3" [src]="newsItem.fields.image.fields.file.url" [alt]="newsItem.fields.caption">
     </div>
   </div>
-</a>
+<!--</a>-->
