@@ -12,7 +12,7 @@
     <p markdown [data]="contactPage?.fields.preface" class="contact-content__call-to-action--preface">
     </p>
 
-    <blockquote class="contact-content__call-to-action--banner">
+    <blockquote *ngIf="contactPage?.fields.banner" class="contact-content__call-to-action--banner">
       {{ contactPage?.fields.banner }}
     </blockquote>
 

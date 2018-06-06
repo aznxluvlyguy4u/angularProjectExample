@@ -11,7 +11,7 @@
     <p markdown [data]="animalHealthPage?.fields.preface" class="animal-health-content__call-to-action--preface">
     </p>
 
-    <blockquote class="animal-health-content__call-to-action--banner">
+    <blockquote *ngIf="animalHealthPage?.fields.banner" class="animal-health-content__call-to-action--banner">
       {{ animalHealthPage?.fields.banner }}
     </blockquote>
 
