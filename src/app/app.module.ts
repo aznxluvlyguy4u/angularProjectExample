@@ -28,6 +28,7 @@ import { NewsItemComponent } from './components/news-item/news-item.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, data: { title: 'Home' } },
   { path: 'animal-registration', component: AnimalRegistrationComponent, data: {
     title: 'Animal Registration' }},
