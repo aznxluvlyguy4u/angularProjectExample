@@ -1,12 +1,12 @@
-<a [href]="animalHealthArticle.fields.linkUrl">
-  <div class="animal-health-artical__container">
+<div class="animal-health-artical__container">
+  <a [href]="animalHealthArticle.fields.linkUrl">
     <div class="animal-health-article d-flex"  [ngStyle]="{'background-image': 'url(' + animalHealthArticle.fields.image.fields.file.url + ')'}">
     </div>
     <div class="animal-health-artical__textContainer d-flex align-content-start flex-wrap">
       <p class="col-12 animal-health-article__topic">{{ animalHealthArticle.fields.topic }}</p>
       <p class="col-12 animal-health-article__title">{{ animalHealthArticle.fields.title }}</p>
     </div>
-  </div>
-</a>
+  </a>
+</div>
 
 
