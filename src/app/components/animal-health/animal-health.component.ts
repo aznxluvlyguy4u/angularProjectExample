@@ -38,7 +38,7 @@ export class AnimalHealthComponent implements OnInit {
       title: 'AANMELDFORMULIER NSFO DIERGEZONDHEID',
       icon: 'assets/svg/dierregistratie.svg',
       linkText: 'Download: pdf 520 kb',
-      linkUrl: 'zwoegerziekte'
+      linkUrl: 'https://assets.ctfassets.net/ab1wht89h7y6/45uzOdpvNu0mKosms6AqMU/932854a994e061efc4fdb15762eae312/ZWOF012-5__aanmelden_NSFO_Diergezondheid_.pdf'
     },
     {
       backgroundColor: '#459d68',

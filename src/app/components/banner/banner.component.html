@@ -5,7 +5,7 @@
     </div>
     <div class="banner__content--rightColumn row col-10 d-flex align-content-center">
       <p [ngStyle]="{ 'color': banner.color }" class="col-12 banner__content--rightColumn__title">{{ banner.title }}</p>
-      <a [ngStyle]="{ 'color': banner.color }" class="col-12 banner__content--rightColumn__url" href="{{ banner.linkUrl }}">{{ banner.linkText }}</a>
+      <a [ngStyle]="{ 'color': banner.color }" class="col-12 banner__content--rightColumn__url" target="_blank" href="{{ banner.linkUrl }}">{{ banner.linkText }}</a>
     </div>
   </div>
 </div>
