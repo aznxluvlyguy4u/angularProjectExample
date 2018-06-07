@@ -16,11 +16,11 @@ export class NavbarComponent implements OnInit {
     },
     {
       routerLink: 'animal-registration',
-      title: 'DIERENREGISTRATIE'
+      title: 'DIERREGISTRATIE'
     },
     {
       routerLink: 'animal-health',
-      title: 'DIERENGEZONDHEID'
+      title: 'DIERGEZONDHEID'
     },
     {
       routerLink: 'breeding-farm',
