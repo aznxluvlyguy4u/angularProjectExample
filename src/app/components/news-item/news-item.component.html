@@ -1,20 +1,38 @@
-<div class="newsItem row">
-  <a class="col-12" [routerLink]="['/news', newsItem.sys.id]">
-    <img class="img-fluid col-12"[src]="newsItem.fields.image.fields.file.url" alt="">
-    <div class="col-12">
-      <div class="col-12">
-        <div class="newsItem__banner d-flex">
-          <div class="newsItem__banner--icon pl-3 col-2">
-            <img src="{{ newsItem.fields.icon.fields.file.url }}">
-          </div>
-          <div class="newsItem__banner--text pl-4 col-10">
-            <p class="newsItem__banner--text__title mb-1 w-100">
-              {{ newsItem.fields.title }}
-            </p>
-            <p class="newsItem__banner--text__subtitle w-100">
-              {{ newsItem.fields.subtitle }}
-            </p>
-          </div>
+<!--<div class="newsItem row">-->
+  <!--<a class="col-12" [routerLink]="['/news', newsItem.sys.id]">-->
+    <!--<img class="newsItem__image img-fluid col-12"[src]="newsItem.fields.image.fields.file.url" alt="">-->
+    <!--<div class="col-12">-->
+      <!--<div class="col-12">-->
+        <!--<div class="newsItem__banner d-flex">-->
+          <!--<div class="newsItem__banner&#45;&#45;icon pl-3 col-2">-->
+            <!--<img src="{{ newsItem.fields.icon.fields.file.url }}">-->
+          <!--</div>-->
+          <!--<div class="newsItem__banner&#45;&#45;text pl-4 col-10">-->
+            <!--<p class="newsItem__banner&#45;&#45;text__title mb-1 w-100">-->
+              <!--{{ newsItem.fields.title }}-->
+            <!--</p>-->
+            <!--<p class="newsItem__banner&#45;&#45;text__subtitle w-100">-->
+              <!--{{ newsItem.fields.subtitle }}-->
+            <!--</p>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</a>-->
+<!--</div>-->
+
+<div class="card">
+  <a [routerLink]="['/news', newsItem.sys.id]">
+    <div class="image-container" [ngStyle]="{'background-image': 'url('+ newsItem.fields.image.fields.file.url + ')'}">
+    </div>
+    <div class="overlay">
+      <div class="row">
+        <div class="newsItem__banner--icon pl-3 col-2">
+          <img src="{{ newsItem.fields.icon.fields.file.url }}">
+        </div>
+        <div class="col-10">
+          <h5 class="card-title">{{ newsItem.fields.title }}</h5>
+          <p class="card-text">{{ newsItem.fields.subtitle }}</p>
         </div>
       </div>
     </div>

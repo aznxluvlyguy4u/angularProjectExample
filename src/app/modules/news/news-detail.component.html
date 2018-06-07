@@ -1,11 +1,11 @@
 <div class="row news-detail pt-5 pb-5">
   <div class="news-detail-content col-12 col-md-9 mb-5 row d-flex justify-content-center">
 
-    <div class="news-detail-content__image col-12 col-md-8">
+    <div class="news-detail-content__image col-12 col-md-10">
       <img class="img-fluid mb-3" *ngIf="newsItemImage" [src]="newsItemImage?.fields?.file?.url" [alt]="newsItem.fields.caption">
     </div>
 
-    <div class="news-detail-content__text col-12 col-md-8">
+    <div class="news-detail-content__text col-12 col-md-10">
       <h3 class="news-detail-content__text__title">{{ newsItem?.fields?.title }}</h3>
       <p class="news-detail-content__text__datetime">
         <span><i class="far fa-clock"></i></span>

@@ -80,7 +80,7 @@ export class ContentfulService {
   getNewsItems(query?: object): Promise<Entry<any>[]> {
     return this.cdaClient.getEntries(Object.assign({
       content_type: CONFIG.contentTypeIds.newsItem,
-      order: 'sys.createdAt'
+      order: '-fields.dateTime'
     }, query))
       .then(res => res.items);
   }
