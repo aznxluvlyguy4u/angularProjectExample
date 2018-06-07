@@ -2,6 +2,7 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {ContentfulService} from '../../services/contentful.service';
 import {ActivatedRoute} from '@angular/router';
 import {Entry} from 'contentful';
+import {MainCarouselService} from '../../services/main-carousel.service';
 
 @Component({
   selector: 'app-animal-health-detail',
@@ -17,12 +18,14 @@ export class AnimalHealthDetailComponent implements OnInit {
 
   constructor(
     private contentfulService: ContentfulService,
+    private mainCarouselService: MainCarouselService,
     private activatedRoute: ActivatedRoute
   ) { }
 
   ngOnInit() {
     this.loadAnimalHealthArticle();
     this.loadAnimalHealthArticles();
+    this.loadMainCarouselImage();
   }
 
   // Load animalHealthArticle from contentful API
@@ -46,6 +49,16 @@ export class AnimalHealthDetailComponent implements OnInit {
     this.contentfulService.getAnimalHealthArticles()
       .then(animalHealthArticles => {
         this.animalHealthArticles = animalHealthArticles;
+      });
+  }
+
+  loadMainCarouselImage() {
+    this.contentfulService.getAnimalHealthPage()
+      .then(animalHealthPage => {
+        this.contentfulService.getAsset(animalHealthPage.fields.carouselImage.sys.id)
+          .then(mainCarouselImage => {
+            this.mainCarouselService.changeImage(mainCarouselImage.fields.file.url);
+          });
       });
   }
 }
