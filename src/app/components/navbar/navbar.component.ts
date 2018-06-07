@@ -36,7 +36,7 @@ export class NavbarComponent implements OnInit {
     },
     {
       routerLink: 'contact',
-      title: 'CONTACTS'
+      title: 'CONTACT'
     }
   ];
 
