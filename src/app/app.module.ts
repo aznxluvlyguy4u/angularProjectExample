@@ -27,6 +27,7 @@ import { LoginBarComponent } from './components/login-bar/login-bar.component';
 import { NewsItemComponent } from './components/news-item/news-item.component';
 import { AnimalHealthDetailComponent } from './components/animal-health-detail/animal-health-detail.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { DownloadsComponent } from './components/downloads/downloads.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -45,6 +46,8 @@ const appRoutes: Routes = [
     title: 'Contact' }},
   { path: 'sign-up', component: SignUpComponent, data: {
     title: 'Sign Up' }},
+  { path: 'downloads', component: DownloadsComponent, data: {
+    title: 'Downloads' }},
   { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
 
@@ -68,6 +71,7 @@ const appRoutes: Routes = [
     LoginBarComponent,
     AnimalHealthDetailComponent,
     SignUpComponent,
+    DownloadsComponent,
   ],
   imports: [
     BrowserModule,

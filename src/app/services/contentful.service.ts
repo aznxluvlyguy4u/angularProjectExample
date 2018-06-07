@@ -28,7 +28,8 @@ const CONFIG = {
     breedingFarmPageEntryId: '2h0sLKScpyye8oyqmiagQ0',
     aboutPageEntryId: '11bLJVrPAIgyQAEEECGkg6',
     contactPageEntryId: '2uZ8fqv2PykE2YSQ8AWqYq',
-    signupPageEntryId: 'pwLb3oC3BeiECeCGGkY4C'
+    signupPageEntryId: 'pwLb3oC3BeiECeCGGkY4C',
+    downloadsPageEntryId: '5RHcSF3R0kMaUASsao4egU'
   }
 }
 
@@ -74,6 +75,12 @@ export class ContentfulService {
   getSignUpPage(): Promise<Entry<any>> {
     return this.cdaClient.getEntry(
       CONFIG.pageEntryIds.signupPageEntryId
+    );
+  }
+
+  getDownloadsPage(): Promise<Entry<any>> {
+    return this.cdaClient.getEntry(
+      CONFIG.pageEntryIds.downloadsPageEntryId
     );
   }
 
