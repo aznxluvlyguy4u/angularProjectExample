@@ -1,5 +1,7 @@
-.news-detail-content {
-  .news-detail-content__text__title {
+.animal-health-detail-content {
+
+
+  .animal-health-detail-content__text__topic {
     font-family: brandon_grotesquemedium;
     font-size: 19px;
     font-weight: 500;
@@ -14,19 +16,7 @@
     margin-bottom: 1rem;
   }
 
-  .news-detail-content__text__datetime {
-    font-family: SourceSerifPro;
-    font-size: 12px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.5;
-    letter-spacing: normal;
-    text-align: left;
-    color: #4a4a4a;
-  }
-
-  .news-detail-content__text__subtitle {
+  .animal-health-detail-content__text__title {
     font-family: brandon_grotesqueblack;
     font-size: 28px;
     font-style: normal;
@@ -39,8 +29,7 @@
     margin-bottom: 1rem;
   }
 
-
-  .news-detail-content__text__body {
+  .animal-health-detail-content__text__body {
     h1 {
       font-family: brandon_grotesquemedium;
       font-size: 19px;
@@ -95,10 +84,14 @@
 
       text-overflow: ellipsis;
     }
+
+    img {
+      max-width: 100%;
+    }
   }
 }
 
-.news-detail-bullets {
+.animal-health-detail-bullets {
   ul {
     -webkit-padding-start: 0px;
 

@@ -101,4 +101,10 @@ export class ContentfulService {
     }, query))
       .then(res => res.items);
   }
+
+  getAnimalHealthArticle(id?: string): Promise<Entry<any>> {
+    return this.cdaClient.getEntry(
+      id
+    );
+  }
 }

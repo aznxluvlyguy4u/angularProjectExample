@@ -25,6 +25,7 @@ import { AnimalHealthArticleComponent } from './components/animal-health-article
 import { BannerComponent } from './components/banner/banner.component';
 import { LoginBarComponent } from './components/login-bar/login-bar.component';
 import { NewsItemComponent } from './components/news-item/news-item.component';
+import { AnimalHealthDetailComponent } from './components/animal-health-detail/animal-health-detail.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -32,6 +33,8 @@ const appRoutes: Routes = [
   { path: 'animal-registration', component: AnimalRegistrationComponent, data: {
     title: 'Animal Registration' }},
   { path: 'animal-health', component: AnimalHealthComponent, data: {
+    title: 'Animal Health' }},
+  { path: 'animal-health/:id', component: AnimalHealthDetailComponent, data: {
     title: 'Animal Health' }},
   { path: 'breeding-farm', component: BreedingFarmComponent, data: {
     title: 'Breeding Farm' }},
@@ -60,6 +63,7 @@ const appRoutes: Routes = [
     AnimalHealthArticleComponent,
     BannerComponent,
     LoginBarComponent,
+    AnimalHealthDetailComponent,
   ],
   imports: [
     BrowserModule,
