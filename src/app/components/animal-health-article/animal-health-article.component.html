@@ -1,5 +1,5 @@
 <div class="animal-health-artical__container">
-  <a [routerLink]="['/animal-health', animalHealthArticle.sys.id]">
+  <a [routerLink]="['/animal-health', animalHealthArticle.sys.id]" (click)="scrollToTop()">
     <div class="animal-health-article d-flex"  [ngStyle]="{'background-image': 'url(' + animalHealthArticle.fields.image.fields.file.url + ')'}">
     </div>
     <div class="animal-health-artical__textContainer d-flex align-content-start flex-wrap">

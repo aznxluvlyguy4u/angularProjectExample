@@ -13,4 +13,8 @@ export class AnimalHealthArticleComponent implements OnInit {
   ngOnInit() {
   }
 
+  scrollToTop() {
+    window.scroll(0, 500);
+    // target.scrollIntoView();
+  }
 }

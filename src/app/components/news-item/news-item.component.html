@@ -1,5 +1,5 @@
 <div class="newsItem row">
-  <a class="col-12" [routerLink]="['/news', newsItem.fields.entryId]">
+  <a class="col-12" [routerLink]="['/news', newsItem.sys.id]">
     <img class="img-fluid col-12"[src]="newsItem.fields.image.fields.file.url" alt="">
     <div class="col-12">
       <div class="col-12">

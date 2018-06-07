@@ -5,7 +5,6 @@ import { NewsListComponent } from './news-list.component';
 import { NewsDetailComponent }  from './news-detail.component';
 import { NewsListItemComponent } from './news-list-item.component';
 
-import { NewsService } from './news.service';
 import { NewsRoutingModule } from './news-routing.module';
 import {MarkdownModule} from 'ngx-markdown';
 
@@ -20,6 +19,6 @@ import {MarkdownModule} from 'ngx-markdown';
     NewsListItemComponent,
     NewsDetailComponent
   ],
-  providers: [ NewsService ]
+  providers: []
 })
 export class NewsModule {}

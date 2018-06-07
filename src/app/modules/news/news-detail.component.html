@@ -22,7 +22,7 @@
 
   <div class="col-3 d-none d-md-block news-detail-bullets">
     <ul>
-      <li *ngFor="let item of newsItems"><a routerLink="/news/{{item?.fields?.entryId}}">{{item?.fields?.title}}</a></li>
+      <li *ngFor="let item of newsItems"><a routerLink="/news/{{item?.sys?.id}}">{{item?.fields?.title}}</a></li>
     </ul>
   </div>
 
