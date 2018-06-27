@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  backgroundImage = 'assets/png/nsfoFooter@2x.png';
+  backgroundImage = 'assets/png/nsfoFooter@3x.png';
 
   constructor() { }
 
