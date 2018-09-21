@@ -2,12 +2,34 @@ import { Injectable } from '@angular/core';
 
 import { createClient, Entry } from 'contentful';
 
+// const CONFIG = {
+//   space: 'wl1z0pal05vy',
+//   accessToken: '0e3ec801b5af550c8a1257e8623b1c77ac9b3d8fcfc1b2b7494e3cb77878f92a',
+//
+//   contentTypeIds: {
+//     product: '2PqfXUJwE8qSYKuM0U6w8M'
+//   }
+// }
+
 const CONFIG = {
-  space: 'wl1z0pal05vy',
-  accessToken: '0e3ec801b5af550c8a1257e8623b1c77ac9b3d8fcfc1b2b7494e3cb77878f92a',
+  space: 'ab1wht89h7y6',
+  accessToken: '563773974e0ac004f8c429d9a0ace9de96d002a49bbaa6e3011b0e9da3afda93',
 
   contentTypeIds: {
-    product: '2PqfXUJwE8qSYKuM0U6w8M'
+    product: 'product',
+    newsItem: 'newsItem',
+    page: 'page',
+    animalHealthArticle: 'animalHealthArticle'
+  },
+
+  pageEntryIds: {
+    animalHealthPageEntryId: '1DHVHhWtKI64u4QwG2G6Mw',
+    animalRegistrationPageEntryId: '5kGcP25yQEeAiKmsQeuYIk',
+    breedingFarmPageEntryId: '2h0sLKScpyye8oyqmiagQ0',
+    aboutPageEntryId: '11bLJVrPAIgyQAEEECGkg6',
+    contactPageEntryId: '2uZ8fqv2PykE2YSQ8AWqYq',
+    signupPageEntryId: 'pwLb3oC3BeiECeCGGkY4C',
+    downloadsPageEntryId: '5RHcSF3R0kMaUASsao4egU'
   }
 }
 
@@ -20,10 +42,83 @@ export class ContentfulService {
 
   constructor() { }
 
+  getBreedingFarmPage(): Promise<Entry<any>> {
+    return this.cdaClient.getEntry(
+      CONFIG.pageEntryIds.breedingFarmPageEntryId
+    );
+  }
+
+  getAnimalRegistrationPage(): Promise<Entry<any>> {
+    return this.cdaClient.getEntry(
+      CONFIG.pageEntryIds.animalRegistrationPageEntryId
+    );
+  }
+
+  getAnimalHealthPage(): Promise<Entry<any>> {
+    return this.cdaClient.getEntry(
+      CONFIG.pageEntryIds.animalHealthPageEntryId
+    );
+  }
+
+  getAboutPage(): Promise<Entry<any>> {
+    return this.cdaClient.getEntry(
+      CONFIG.pageEntryIds.aboutPageEntryId
+    );
+  }
+
+  getContactPage(): Promise<Entry<any>> {
+    return this.cdaClient.getEntry(
+      CONFIG.pageEntryIds.contactPageEntryId
+    );
+  }
+
+  getSignUpPage(): Promise<Entry<any>> {
+    return this.cdaClient.getEntry(
+      CONFIG.pageEntryIds.signupPageEntryId
+    );
+  }
+
+  getDownloadsPage(): Promise<Entry<any>> {
+    return this.cdaClient.getEntry(
+      CONFIG.pageEntryIds.downloadsPageEntryId
+    );
+  }
+
   getProducts(query?: object): Promise<Entry<any>[]> {
     return this.cdaClient.getEntries(Object.assign({
       content_type: CONFIG.contentTypeIds.product
     }, query))
-    .then(res => res.items);
+      .then(res => res.items);
+  }
+
+  getNewsItems(query?: object): Promise<Entry<any>[]> {
+    return this.cdaClient.getEntries(Object.assign({
+      content_type: CONFIG.contentTypeIds.newsItem,
+      order: '-fields.dateTime'
+    }, query))
+      .then(res => res.items);
+  }
+
+  getNewsItem(id?: string): Promise<Entry<any>> {
+    return this.cdaClient.getEntry(
+      id
+    );
+  }
+
+  getAsset(id?: string): Promise<Entry<any>> {
+    return this.cdaClient.getAsset(id);
+  }
+
+  getAnimalHealthArticles(query?: object): Promise<Entry<any>[]> {
+    return this.cdaClient.getEntries(Object.assign({
+      content_type: CONFIG.contentTypeIds.animalHealthArticle
+    }, query))
+      .then(res => res.items);
+  }
+
+  getAnimalHealthArticle(id?: string): Promise<Entry<any>> {
+    return this.cdaClient.getEntry(
+      id
+    );
   }
 }

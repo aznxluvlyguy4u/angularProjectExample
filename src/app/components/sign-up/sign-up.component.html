@@ -1,0 +1,24 @@
+<div class="row sign-up-content d-flex justify-content-center">
+  <div class="col-12 col-md-7 sign-up-content__call-to-action">
+
+    <h1 class="sign-up-content__call-to-action--title">
+      {{ signUpPage?.fields.title }}
+    </h1>
+
+    <h2 class="sign-up-content__call-to-action--subtitle">
+      {{ signUpPage?.fields.subtitle }}
+    </h2>
+
+    <p markdown [data]="signUpPage?.fields.preface" class="sign-up-content__call-to-action--preface">
+    </p>
+
+    <blockquote *ngIf="signUpPage?.fields.banner" class="sign-up-content__call-to-action--banner">
+      {{ signUpPage?.fields.banner }}
+    </blockquote>
+
+    <div markdown [data]="signUpPage?.fields.body" class="sign-up-content__call-to-action--content">
+    </div>
+  </div>
+
+</div>
+

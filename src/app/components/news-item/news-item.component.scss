@@ -1,0 +1,56 @@
+.card {
+  margin-bottom: 1.5rem;
+}
+
+.image-container {
+  width: 100%;
+  padding-top: 60%;
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size: 100% auto;
+}
+
+.overlay {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1.25rem;
+  background: rgba(39.2, 39.2, 39.2, 0.6);
+
+  .card-title {
+    //max-height: 20%;
+    margin-bottom: 0px;
+    font-family: brandon_grotesquemedium;
+    font-size: 0.6rem;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.3px;
+    text-align: left;
+    text-transform: uppercase;
+    color: #f8f8f8;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .card-text {
+    //max-height: 80%;
+    font-family: SourceSerifPro;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.6px;
+    text-align: left;
+    text-transform: uppercase;
+    color: #f8f8f8;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+

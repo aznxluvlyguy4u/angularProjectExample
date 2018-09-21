@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ContentfulService } from '../../services/contentful.service';
 import { Entry } from 'contentful';
+import { MainCarouselService } from '../../services/main-carousel.service';
 
 @Component({
   selector: 'app-home',
@@ -9,16 +10,38 @@ import { Entry } from 'contentful';
 })
 export class HomeComponent implements OnInit {
 
-  private products: Entry<any>[] = [];
+  products: Entry<any>[] = [];
+  newsItems: Entry<any>[] = [];
+  mainCarouselImage = 'assets/images/sheeps-home@2x.jpg';
 
-  constructor(private contentfulService: ContentfulService) { }
+  constructor(
+    private contentfulService: ContentfulService,
+    private mainCarouselService: MainCarouselService
+  ) { }
 
   ngOnInit() {
-      this.contentfulService.getProducts()
-      .then(products => {
-        this.products = products;
-        console.log(products);
-      })
+    this.loadProducts();
+    this.loadNewsItems();
+    this.loadMainCarouselImage();
   }
 
+  // Load products from contentful API
+  loadProducts() {
+    this.contentfulService.getProducts()
+      .then(products => {
+        this.products = products;
+      });
+  }
+
+  // Load newsItems from contentful API
+  loadNewsItems() {
+    this.contentfulService.getNewsItems()
+      .then(newsItems => {
+        this.newsItems = newsItems;
+      });
+  }
+
+  loadMainCarouselImage() {
+    this.mainCarouselService.changeImage(this.mainCarouselImage);
+  }
 }

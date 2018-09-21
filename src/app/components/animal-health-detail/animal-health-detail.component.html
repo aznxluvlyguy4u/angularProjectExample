@@ -1,0 +1,27 @@
+<div class="row animal-health-detail pt-5 pb-5">
+  <div class="animal-health-detail-content col-12 col-md-9 mb-5 row d-flex justify-content-center">
+
+    <div class="animal-health-detail-content__image col-12 col-md-10">
+      <img class="img-fluid mb-3" *ngIf="animalHealthArticleImage" [src]="animalHealthArticleImage?.fields?.file?.url" [alt]="animalHealthArticle.fields.caption">
+    </div>
+
+    <div class="animal-health-detail-content__text col-12 col-md-10">
+      <h3 class="animal-health-detail-content__text__topic">{{ animalHealthArticle?.fields?.topic }}</h3>
+      <p class="animal-health-detail-content__text__title">{{ animalHealthArticle?.fields?.title }}</p>
+      <div markdown [data]="animalHealthArticle?.fields?.body" class="animal-health-detail-content__text__body mb-2">
+      </div>
+
+      <a routerLink="/animal-health" class="animal-health-detail-content__back-button btn btn-sm btn-outline-success">Terug naar overzicht</a>
+    </div>
+
+  </div>
+
+  <div class="col-3 d-none d-md-block animal-health-detail-bullets">
+    <ul>
+      <li *ngFor="let article of animalHealthArticles">
+        <a routerLink="/animal-health/{{article?.sys?.id }}">{{article?.fields?.title}}</a>
+      </li>
+    </ul>
+  </div>
+
+</div>

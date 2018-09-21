@@ -1,0 +1,21 @@
+<a class="newsListItem__wrapping-link" [routerLink]="['/news', newsItem.sys.id]">
+  <div class="newsListItem mb-5 row d-flex flex-md-row flex-column-reverse border-bottom">
+      <div class="newsListItem-text col-12 col-md-8">
+        <h3 class="newsListItem-text__title">{{ newsItem.fields.title }}</h3>
+        <p class="newsListItem-text__datetime">
+          <span><i class="far fa-clock"></i></span>
+          {{ newsItem.fields.dateTime | date:'dd MMMM yyyy'}}
+        </p>
+        <p class="newsListItem-text__subtitle">{{ newsItem.fields.subtitle }}</p>
+
+        <div markdown [data]="newsItem?.fields?.body" class="newsListItem-text__body mb-2">
+        </div>
+
+        <a [routerLink]="['/news', newsItem.sys.id]" class="card-link">Meer...</a>
+      </div>
+
+    <div class="newsListItem-image col-12 col-md-4">
+      <img class="img-fluid mb-3" [src]="newsItem.fields.image.fields.file.url" [alt]="newsItem.fields.caption">
+    </div>
+  </div>
+</a>

@@ -1,0 +1,29 @@
+<div class="row news-detail pt-5 pb-5">
+  <div class="news-detail-content col-12 col-md-9 mb-5 row d-flex justify-content-center">
+
+    <div class="news-detail-content__image col-12 col-md-10">
+      <img class="img-fluid mb-3" *ngIf="newsItemImage" [src]="newsItemImage?.fields?.file?.url" [alt]="newsItem.fields.caption">
+    </div>
+
+    <div class="news-detail-content__text col-12 col-md-10">
+      <h3 class="news-detail-content__text__title">{{ newsItem?.fields?.title }}</h3>
+      <p class="news-detail-content__text__datetime">
+        <span><i class="far fa-clock"></i></span>
+        {{ newsItem?.fields?.dateTime | date:'dd MMMM yyyy'}}
+      </p>
+      <p class="news-detail-content__text__subtitle">{{ newsItem?.fields?.subtitle }}</p>
+      <div markdown [data]="newsItem?.fields?.body" class="news-detail-content__text__body mb-2">
+      </div>
+
+      <a routerLink="/news" class="news-detail-content__back-button btn btn-sm btn-outline-success">Terug naar overzicht</a>
+    </div>
+
+  </div>
+
+  <div class="col-3 d-none d-md-block news-detail-bullets">
+    <ul>
+      <li *ngFor="let item of newsItems"><a routerLink="/news/{{item?.sys?.id}}">{{item?.fields?.title}}</a></li>
+    </ul>
+  </div>
+
+</div>

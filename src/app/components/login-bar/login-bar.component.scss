@@ -1,0 +1,27 @@
+.login-bar {
+  font-family: brandon_grotesquemedium;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  text-align: center;
+
+  .nav-link {
+    padding: .2rem .4rem;
+  }
+
+  .login-bar__downloads-button {
+    color: black;
+  }
+
+  .login-bar__login-button {
+  }
+
+  .login-bar__subscribe-button {
+    border-color: #389f79;
+    border-radius: 15px;
+  }
+}
+

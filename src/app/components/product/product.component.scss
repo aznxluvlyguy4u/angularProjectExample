@@ -1,0 +1,42 @@
+.product__image {
+  height: 51px;
+  width: 46px;
+}
+
+.product__name {
+  font-family: brandon_grotesqueblack;
+  font-size: 16px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.38;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #4a4a4a;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.product__description {
+  font-family: SourceSerifPro;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.44;
+  letter-spacing: normal;
+  text-align: center;
+  color: #4a4a4a;
+}
+
+.product__bottom {
+  position: absolute;
+  width: 36px;
+  height: 3px;
+  display: block;
+  bottom: 0px;
+  background-color: #389f79;
+  left: 50%;
+  margin-left: -18px;
+}

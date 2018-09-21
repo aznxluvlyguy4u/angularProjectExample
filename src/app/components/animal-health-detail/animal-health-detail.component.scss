@@ -1,0 +1,104 @@
+.animal-health-detail-content {
+
+
+  .animal-health-detail-content__text__topic {
+    font-family: brandon_grotesquemedium;
+    font-size: 19px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 2.5px;
+    color: #4a4a4a;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .animal-health-detail-content__text__title {
+    font-family: brandon_grotesqueblack;
+    font-size: 28px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.14;
+    letter-spacing: 1.3px;
+    text-align: left;
+    text-transform: uppercase;
+    color: #419e66;
+    margin-bottom: 1rem;
+  }
+
+  .animal-health-detail-content__text__body {
+    h1 {
+      font-family: brandon_grotesquemedium;
+      font-size: 19px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 2.5px;
+      color: #4a4a4a;
+      text-decoration: underline;
+      text-underline-position: under;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-family: brandon_grotesqueblack;
+      font-size: 28px;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.14;
+      letter-spacing: 1.3px;
+      text-align: left;
+      text-transform: uppercase;
+      color: #419e66;
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      font-family: brandon_grotesquemedium;
+      font-size: 22px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #459d68;
+    }
+
+    p, ul {
+      font-family: SourceSerifPro;
+      font-size: 16px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.5;
+      letter-spacing: normal;
+      text-align: left;
+      color: #4a4a4a;
+      margin-bottom: 2rem;
+
+      text-overflow: ellipsis;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.animal-health-detail-bullets {
+  ul {
+    -webkit-padding-start: 0px;
+
+    li {
+      text-decoration: underline;
+      margin-bottom: 1rem;
+      list-style-type: none;
+    }
+  }
+}

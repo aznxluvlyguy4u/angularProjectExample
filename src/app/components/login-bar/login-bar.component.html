@@ -1,0 +1,26 @@
+<ul class="login-bar nav justify-content-end align-content-center">
+  <li class="nav-item">
+    <a class="nav-link" routerLink="downloads" routerLinkActive="active">
+      <button class="btn btn-sm btn-link login-bar__downloads-button">
+        DOWNLOADS
+      </button>
+    </a>
+  </li>
+  <!--<li class="nav-item">-->
+    <!--<a class="nav-link" href="#">-->
+      <!--<button class="btn btn-sm btn-light login-bar__search-button">-->
+        <!--<i class="fas fa-search"></i>-->
+      <!--</button>-->
+    <!--</a>-->
+  <!--</li>-->
+  <li class="nav-item">
+    <a class="nav-link" [href]="loginUrl" target="_blank">
+      <button class="btn btn-sm btn-success login-bar__login-button">LOGIN</button>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="sign-up" routerLinkActive="active">
+      <button class="btn btn-sm btn-outline-success login-bar__subscribe-button">INSCHRIJVEN</button>
+    </a>
+  </li>
+</ul>

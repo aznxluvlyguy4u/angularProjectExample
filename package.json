@@ -5,7 +5,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build --prod --aot",
+    "deploy:staging": "ng build --aot && gulp deploy:staging",
+    "deploy:prod": "ng build --prod --aot && gulp deploy:prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -22,9 +24,11 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "@ng-bootstrap/ng-bootstrap": "^1.0.4",
+    "bootstrap": "^4.1.1",
     "contentful": "^5.1.3",
     "core-js": "^2.4.1",
-    "ngx-bootstrap": "^2.0.3",
+    "ngx-bootstrap": "^2.0.5",
+    "ngx-markdown": "^1.6.0",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },
@@ -36,6 +40,9 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "codelyzer": "^4.0.1",
+    "gulp": "^3.9.1",
+    "gulp-env": "^0.4.0",
+    "gulp-s3-upload": "^1.7.0",
     "jasmine-core": "~2.8.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~2.0.0",

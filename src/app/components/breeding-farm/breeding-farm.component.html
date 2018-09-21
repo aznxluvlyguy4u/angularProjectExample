@@ -1,0 +1,24 @@
+<div class="row breeding-farm-content d-flex justify-content-center">
+  <div class="col-12 col-md-7 breeding-farm-content__call-to-action">
+
+    <h1 class="breeding-farm-content__call-to-action--title">
+      {{ breedingFarmPage?.fields.title }}
+    </h1>
+
+    <h2 class="breeding-farm-content__call-to-action--subtitle">
+      {{ breedingFarmPage?.fields.subtitle }}
+    </h2>
+
+    <p markdown [data]="breedingFarmPage?.fields.preface" class="breeding-farm-content__call-to-action--preface">
+    </p>
+
+    <blockquote *ngIf="breedingFarmPage?.fields.banner" class="breeding-farm-content__call-to-action--banner">
+      {{ breedingFarmPage?.fields.banner }}
+    </blockquote>
+
+    <div markdown [data]="breedingFarmPage?.fields.body" class="breeding-farm-content__call-to-action--content">
+    </div>
+  </div>
+
+</div>
+

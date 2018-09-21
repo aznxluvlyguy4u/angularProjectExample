@@ -13,7 +13,12 @@ import { Title } from '@angular/platform-browser';
 })
 
 export class AppComponent implements OnInit {
-  constructor(private titleService: Title, private router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(
+    private titleService: Title,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) { }
+
   ngOnInit() {
     this.router.events
       .filter((event) => event instanceof NavigationEnd)

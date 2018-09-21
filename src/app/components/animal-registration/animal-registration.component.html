@@ -1,0 +1,25 @@
+<div class="row animal-registration-content d-flex justify-content-center">
+  <div class="col-12 col-md-7 animal-registration-content__call-to-action">
+
+    <h1 class="animal-registration-content__call-to-action--title">
+      {{ animalRegistrationPage?.fields.title }}
+    </h1>
+
+    <h2 class="animal-registration-content__call-to-action--subtitle">
+      {{ animalRegistrationPage?.fields.subtitle }}
+    </h2>
+
+    <p markdown [data]="animalRegistrationPage?.fields.preface" class="animal-registration-content__call-to-action--preface">
+    </p>
+
+    <blockquote *ngIf="animalRegistrationPage?.fields.banner" class="animal-registration-content__call-to-action--banner">
+      {{ animalRegistrationPage?.fields.banner }}
+    </blockquote>
+
+    <div markdown [data]="animalRegistrationPage?.fields.body" class="animal-registration-content__call-to-action--content">
+    </div>
+
+  </div>
+
+</div>
+

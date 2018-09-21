@@ -1,0 +1,121 @@
+.contact-content {
+  background-color: #f8f8f8;
+}
+
+.contact-content__call-to-action {
+  padding-top: 4rem;
+  width: 564px;
+}
+
+.contact-content__call-to-action--title {
+  font-family: brandon_grotesquemedium;
+  font-size: 19px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 2.5px;
+  color: #4a4a4a;
+  text-decoration: underline;
+  text-underline-position: under;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.contact-content__call-to-action--subtitle {
+  font-family: brandon_grotesqueblack;
+  font-size: 28px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.14;
+  letter-spacing: 1.3px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #419e66;
+  margin-bottom: 2rem;
+}
+
+.contact-content__call-to-action--preface {
+  font-family: CrimsonText-Roman;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.88;
+  letter-spacing: normal;
+  text-align: left;
+  color: #4a4a4a;
+  margin-bottom: 4rem;
+}
+
+.contact-content__call-to-action--banner {
+  font-family: CrimsonText-Roman;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: italic;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: left;
+  color: #419e66;
+  border: 3px solid;
+  border-width: 3px 0px;
+  border-color: #459d68;
+  margin-bottom: 4rem;
+}
+
+.contact-content__call-to-action--content {
+  h1 {
+    font-family: brandon_grotesquemedium;
+    font-size: 19px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 2.5px;
+    color: #4a4a4a;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-family: brandon_grotesqueblack;
+    font-size: 28px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.14;
+    letter-spacing: 1.3px;
+    text-align: left;
+    text-transform: uppercase;
+    color: #419e66;
+    margin-bottom: 2rem;
+  }
+
+  h3 {
+    font-family: brandon_grotesquemedium;
+    font-size: 22px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #459d68;
+  }
+
+  p, ul {
+    font-family: SourceSerifPro;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #4a4a4a;
+    margin-bottom: 2rem;
+  }
+}
+
