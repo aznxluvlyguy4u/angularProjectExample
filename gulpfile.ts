@@ -1,8 +1,8 @@
 const gulp = require("gulp");
 const env = require('gulp-env');
 const s3 = require('gulp-s3-upload')(awsConfig);
-const staging_nsfo_website_bucket = 'dev.nsfo.nl';
-const production_nsfo_website_bucket = 'www.nsfo.nl';
+const staging_nsfo_website_bucket = process.env.S3_BUCKET_STAGING;
+const production_nsfo_website_bucket = process.env.S3_BUCKET_PRODUCTION;
 const public_read = 'public-read';
 const retry_count = 5;
 
