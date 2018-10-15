@@ -1,18 +1,18 @@
 const gulp = require("gulp");
 const env = require('gulp-env');
+
+/**
+ * Load environment variables from JSON File.
+ */
+env({
+  file: 'env.json'
+});
+
 const s3 = require('gulp-s3-upload')(awsConfig);
 const staging_nsfo_website_bucket = process.env.S3_BUCKET_STAGING;
 const production_nsfo_website_bucket = process.env.S3_BUCKET_PRODUCTION;
 const public_read = 'public-read';
 const retry_count = 5;
-
-/**
- * Load environment variables from JSON File.
- */
-
-env({
-    file: 'env.json'
-});
 
 
 /**
